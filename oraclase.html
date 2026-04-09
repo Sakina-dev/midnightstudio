@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oraclase | Blocs d'offre site web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        midnight: "#0B132B",
+                        midnightLight: "#1C2541",
+                        gold: "#D4AF37",
+                        goldLight: "#F3E5AB"
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                        serif: ["Playfair Display", "serif"]
+                    },
+                    boxShadow: {
+                        goldGlow: "0 0 0 1px rgba(212,175,55,.25), 0 0 24px rgba(212,175,55,.35)",
+                        soft: "0 10px 40px rgba(0,0,0,.35)"
+                    }
+                }
+            }
+        };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 850ms ease, transform 850ms cubic-bezier(.22,.61,.36,1);
+        }
+        .fade-in-up.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-midnight text-gray-300 font-sans antialiased selection:bg-gold selection:text-midnight overflow-x-hidden" style="background-image: url('./backgroundblue.png'); background-position: center; background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+    <div class="fixed inset-0 bg-midnight/70 pointer-events-none z-0"></div>
+
+    <main class="relative z-10">
+        <section id="devis" class="relative z-10 py-24 px-6">
+            <div class="absolute inset-0 -z-10 bg-gradient-to-b from-midnight/40 via-midnight/85 to-midnight pointer-events-none" aria-hidden="true"></div>
+
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-8">
+                    <a href="./index.html" class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-gray-200 hover:border-gold/40 hover:text-gold transition">
+                        <span aria-hidden="true">←</span> Retour au portfolio
+                    </a>
+                </div>
+
+                <div class="text-center mb-10 fade-in-up">
+                    <div class="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-3 py-1 text-sm text-gold">
+                        Constructeur de forfait interactif
+                    </div>
+                    <h1 class="font-serif text-white font-bold tracking-tight text-[clamp(1.85rem,3.5vw,2.75rem)] mt-4 mb-3">
+                        Blocs d’offre site web
+                    </h1>
+                    <div class="w-20 h-px bg-gold/80 mx-auto mb-4"></div>
+                    <p class="text-gray-400 text-sm md:text-base font-light max-w-3xl mx-auto leading-relaxed">
+                        Glissez les blocs vers le panier ou utilisez « Ajouter ». Les prix sont indicatifs (modulaires). Midnight Studio — thème Oraclase adapté.
+                    </p>
+                </div>
+
+                <div id="pkg-presets" class="grid gap-4 md:grid-cols-3 mb-8"></div>
+
+                <div class="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+                    <div class="rounded-3xl border border-white/12 bg-white/[0.05] backdrop-blur-xl p-5 md:p-6 shadow-xl">
+                        <div class="flex items-center justify-between mb-4 gap-2">
+                            <h3 class="text-xl font-serif font-semibold text-white">Packs disponibles</h3>
+                            <span class="text-sm text-gray-500 shrink-0 hidden sm:inline">Glisser ou cliquer sur « Ajouter »</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-4 sm:hidden">Glisser ou cliquer sur « Ajouter »</p>
+                        <div id="pkg-available" class="space-y-6"></div>
+                    </div>
+
+                    <div
+                        id="pkg-cart-zone"
+                        class="rounded-3xl border border-gold/25 bg-gold/[0.06] backdrop-blur-xl p-5 md:p-6 h-fit lg:sticky lg:top-10 transition-[box-shadow] duration-300"
+                    >
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-serif font-semibold text-white">Votre devis</h3>
+                            <button
+                                type="button"
+                                id="pkg-reset"
+                                class="text-sm text-gray-400 hover:text-gold transition"
+                            >
+                                Réinitialiser
+                            </button>
+                        </div>
+                        <div class="rounded-2xl border border-dashed border-gold/35 bg-midnight/40 p-4 mb-5 text-sm text-gray-400">
+                            La base « Fondation » est incluse par défaut. Déposez des blocs ici pour compléter votre devis.
+                        </div>
+                        <div id="pkg-cart" class="space-y-3 mb-5"></div>
+                        <div id="pkg-total" class="mt-6 rounded-2xl border border-white/10 bg-midnight/50 p-4"></div>
+                        <button type="button" id="btn-transfer-quote" class="mt-4 block w-full rounded-xl bg-[#D4AF37] px-4 py-3 text-center text-sm font-bold text-[#0B132B] hover:shadow-[0_0_20px_-5px_rgba(212,175,55,0.6)] hover:bg-[#F3CF55] transition-all duration-300">Demander ce devis</button>
+                        <div id="pkg-deps" class="mt-4"></div>
+                        <div id="pkg-tips" class="mt-4 rounded-2xl border border-white/10 bg-midnight/40 p-4 text-sm text-gray-400"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="relative z-10 scroll-mt-24 py-20 px-6">
+            <div class="max-w-2xl mx-auto">
+                <div class="text-center mb-10 fade-in-up">
+                    <h2 class="font-serif text-white font-bold tracking-tight text-[clamp(1.75rem,3.2vw,2.35rem)] mb-3">Discutons de votre projet</h2>
+                    <p class="text-gray-400 text-sm md:text-base font-light leading-relaxed">
+                        Le detail du devis est pre-rempli automatiquement. Completez vos besoins et envoyez votre demande.
+                    </p>
+                </div>
+
+                <div class="rounded-2xl border border-white/12 bg-white/[0.04] backdrop-blur-xl p-8 md:p-10 shadow-xl fade-in-up">
+                    <div
+                        id="contact-success"
+                        class="hidden mb-6 rounded-xl border border-gold/35 bg-gold/10 px-4 py-3 text-sm text-gold"
+                        role="status"
+                        aria-live="polite"
+                    >
+                        Votre message a bien été envoyé. Je vous contacte en moins de 24h.
+                    </div>
+                    <form id="contact-form" action="https://formspree.io/f/xojpzqzn" method="POST" class="space-y-6">
+                        <div>
+                            <label for="contact-name" class="block text-xs font-semibold tracking-widest uppercase text-gold/90 mb-2">Nom &amp; Prenom</label>
+                            <input type="text" id="contact-name" name="name" required autocomplete="name" class="w-full rounded-lg bg-midnight/50 border border-white/15 px-4 py-3 text-sm text-gray-100 placeholder-gray-500 outline-none transition focus:border-gold focus:ring-1 focus:ring-gold/80" placeholder="Jean Dupont" />
+                        </div>
+                        <div>
+                            <label for="contact-email" class="block text-xs font-semibold tracking-widest uppercase text-gold/90 mb-2">Adresse email</label>
+                            <input type="email" id="contact-email" name="email" required autocomplete="email" class="w-full rounded-lg bg-midnight/50 border border-white/15 px-4 py-3 text-sm text-gray-100 placeholder-gray-500 outline-none transition focus:border-gold focus:ring-1 focus:ring-gold/80" placeholder="vous@exemple.com" />
+                        </div>
+                        <div>
+                            <label for="message_projet" class="block text-xs font-semibold tracking-widest uppercase text-gold/90 mb-2">Details du projet</label>
+                            <textarea id="message_projet" name="message" required rows="7" class="w-full resize-y min-h-[160px] rounded-lg bg-midnight/50 border border-white/15 px-4 py-3 text-sm text-gray-100 placeholder-gray-500 outline-none transition focus:border-gold focus:ring-1 focus:ring-gold/80" placeholder="Decrivez votre besoin, vos delais, votre budget indicatif..."></textarea>
+                        </div>
+                        <button id="contact-submit" type="submit" class="w-full rounded-lg bg-gold text-midnight font-semibold py-3.5 text-sm tracking-wide shadow-lg transition hover:bg-goldLight disabled:opacity-70 disabled:cursor-not-allowed">Envoyer ma demande</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        (function () {
+            var blocks = [
+                { id: "foundation-base", category: "Fondation", name: "Pack Fondation", price: 1190, description: "Socle projet minimal : cadrage audience et offre, architecture du site, une landing page sur mesure, messages clés et rédaction, passage design / intégration, mise en ligne, recette de base et 3 mois de maintenance légère.", recommended: true },
+                { id: "brand-guidelines", category: "Identité visuelle", name: "Mini charte graphique", price: 190, description: "Palette de couleurs, typographies, direction artistique et règles de marque légères pour le site." },
+                { id: "extra-page", category: "Pages", name: "Page supplémentaire", price: 150, description: "Ajout d'une page dédiée (À propos, Investisseurs, Candidatures, Contact…).", multiple: true },
+                { id: "contact-form", category: "Conversion", name: "Formulaire de contact", price: 80, description: "Formulaire simple relié à une boîte mail ou une adresse partagée.", multiple: false },
+                { id: "demo-booking", category: "Conversion", name: "Parcours « Réserver une démo »", price: 120, description: "Mise en place du CTA, lien de prise de rendez-vous ou formulaire de qualification pour les demandes de démo." },
+                { id: "sample-order-flow", category: "Conversion", name: "Tunnel de demande d'échantillon", price: 420, description: "Parcours structuré pour demande d'échantillon ou pré-pilote : options, tarification indicative et collecte d'informations clarifiée.", recommended: true },
+                { id: "file-upload", category: "Conversion", name: "Envoi de fichiers", price: 100, description: "Téléversement de fichiers ou d'images pour que les prospects joignent une référence visuelle.", requiresOneOf: ["sample-order-flow", "contact-form"] },
+                { id: "dynamic-pricing", category: "Conversion", name: "Tarification dynamique", price: 120, description: "Calcul automatique du prix selon matériau, taille, options ou quantité.", requiresOneOf: ["sample-order-flow"] },
+                { id: "cms-basic", category: "Back-office", name: "CMS / contenus éditables", price: 180, description: "Zones éditables pour que l'équipe mette à jour certaines sections sans développeur." },
+                { id: "database-leads", category: "Back-office", name: "Base de données leads", price: 220, description: "Stockage structuré des envois de formulaires, demandes de démo ou d'échantillon.", requiresOneOf: ["contact-form", "demo-booking", "sample-order-flow"] },
+                { id: "crm-connection", category: "Back-office", name: "Connexion CRM", price: 150, description: "Raccordement des leads capturés à HubSpot, Airtable, Notion ou un autre outil de suivi.", requiresOneOf: ["database-leads", "contact-form", "demo-booking", "sample-order-flow"] },
+                { id: "analytics", category: "Mesure", name: "Configuration analytique", price: 100, description: "Suivi des visites, clics sur les CTA, formulaires et conversions." },
+                { id: "seo-foundations", category: "Visibilité", name: "SEO", price: 190, description: "Titres de pages, méta-descriptions, structure des titres, indexation de base et hygiène SEO." },
+                { id: "legal-pages", category: "Conformité", name: "Mentions & politiques", price: 80, description: "Modèles de mentions légales, politique de confidentialité et bandeau cookies." }
+            ];
+
+            var categoryOrder = ["Fondation", "Identité visuelle", "Pages", "Conversion", "Back-office", "Mesure", "Visibilité", "Conformité"];
+            var presets = {
+                "Lancement Rapide (MVP)": ["foundation-base", "contact-form", "demo-booking", "analytics", "seo-foundations"],
+                "Génération de Leads": ["foundation-base", "brand-guidelines", "sample-order-flow", "file-upload", "dynamic-pricing", "database-leads", "crm-connection", "analytics", "seo-foundations"],
+                "Site commercial complet": ["foundation-base", "brand-guidelines", "extra-page", "extra-page", "contact-form", "demo-booking", "sample-order-flow", "file-upload", "dynamic-pricing", "cms-basic", "database-leads", "crm-connection", "analytics", "seo-foundations", "legal-pages"]
+            };
+
+            var selected = ["foundation-base"];
+            var draggedId = null;
+
+            function esc(s) {
+                return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+            }
+
+            function formatPrice(value) {
+                return new Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(value);
+            }
+
+            function blockById(id) { return blocks.find(function (b) { return b.id === id; }); }
+            function groupByCategory(items) {
+                var grouped = {};
+                categoryOrder.forEach(function (c) { grouped[c] = []; });
+                items.forEach(function (item) { if (!grouped[item.category]) grouped[item.category] = []; grouped[item.category].push(item); });
+                return grouped;
+            }
+            function selectedCounts() {
+                var counts = {};
+                selected.forEach(function (id) { counts[id] = (counts[id] || 0) + 1; });
+                return counts;
+            }
+            function getSelectedBlocks() { return selected.map(function (id) { return blockById(id); }).filter(Boolean); }
+            function getTotal() { return getSelectedBlocks().reduce(function (sum, item) { return sum + item.price; }, 0); }
+            function getMissingDependencies() {
+                var missing = [];
+                var sBlocks = getSelectedBlocks();
+                sBlocks.forEach(function (item) {
+                    if (item.requiresOneOf) {
+                        var ok = item.requiresOneOf.some(function (rid) { return selected.indexOf(rid) !== -1; });
+                        if (!ok) {
+                            missing.push({
+                                item: item.name,
+                                dependsOn: item.requiresOneOf.map(function (id) { return blockById(id) && blockById(id).name; }).filter(Boolean),
+                            });
+                        }
+                    }
+                });
+                return missing;
+            }
+            function canAdd(item) {
+                if (item.id === "foundation-base") return false;
+                if (!item.multiple && selected.indexOf(item.id) !== -1) return false;
+                return true;
+            }
+            function addBlock(id) {
+                var item = blockById(id);
+                if (!item || item.id === "foundation-base") return;
+                if (!item.multiple && selected.indexOf(id) !== -1) return;
+                selected = selected.concat([id]);
+                render();
+            }
+            function removeAt(index) {
+                selected = selected.filter(function (id, i) { return i !== index || id === "foundation-base"; });
+                render();
+            }
+            function applyPreset(name) {
+                selected = presets[name] ? presets[name].slice() : ["foundation-base"];
+                render();
+            }
+
+            var elPresets = document.getElementById("pkg-presets");
+            var elAvailable = document.getElementById("pkg-available");
+            var elCart = document.getElementById("pkg-cart");
+            var elTotal = document.getElementById("pkg-total");
+            var elDeps = document.getElementById("pkg-deps");
+            var elTips = document.getElementById("pkg-tips");
+            var cartZone = document.getElementById("pkg-cart-zone");
+
+            function renderPresets() {
+                var html = "";
+                Object.keys(presets).forEach(function (preset) {
+                    html += '<button type="button" data-pkg-preset="' + esc(preset) + '" class="rounded-2xl border border-white/12 bg-white/[0.04] p-4 text-left hover:border-gold/50 hover:bg-gold/5 transition w-full">' +
+                        '<div class="text-sm text-gold">Forfait type</div>' +
+                        '<div class="mt-1 text-lg font-medium text-white font-serif">' + esc(preset) + "</div>" +
+                        '<div class="mt-2 text-sm text-gray-500">' + presets[preset].length + " blocs présélectionnés</div>" +
+                        "</button>";
+                });
+                elPresets.innerHTML = html;
+            }
+
+            function renderAvailable() {
+                var counts = selectedCounts();
+                var grouped = groupByCategory(blocks);
+                var html = "";
+                categoryOrder.forEach(function (category) {
+                    var items = grouped[category] || [];
+                    if (!items.length) return;
+                    html += '<section class="pkg-cat"><div class="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-gray-500">' + esc(category) + '</div><div class="grid gap-3 md:grid-cols-2">';
+                    items.forEach(function (item) {
+                        var disabled = !canAdd(item);
+                        html += '<div draggable="' + (disabled ? "false" : "true") + '" data-pkg-drag="' + esc(item.id) + '" class="rounded-2xl border p-4 transition ' +
+                            (disabled ? "border-white/10 bg-midnight/30 opacity-50" : "border-white/12 bg-midnight/40 hover:border-gold/45 hover:shadow-[0_0_0_1px_rgba(212,175,55,0.2)] cursor-grab active:cursor-grabbing") +
+                            '">' +
+                            '<div class="flex items-start justify-between gap-3">' +
+                            '<div class="min-w-0">' +
+                            '<div class="flex flex-wrap items-center gap-2">' +
+                            '<h4 class="text-base font-medium text-white">' + esc(item.name) + "</h4>";
+                        if (item.recommended) html += '<span class="rounded-full bg-gold/15 px-2 py-0.5 text-xs text-gold border border-gold/25">Recommandé</span>';
+                        if (item.multiple) html += '<span class="rounded-full bg-white/10 px-2 py-0.5 text-xs text-gray-300 border border-white/15">Réplicable</span>';
+                        html += "</div>" +
+                            '<p class="mt-2 text-sm leading-relaxed text-gray-400">' + esc(item.description) + "</p>";
+                        if (item.requiresOneOf) {
+                            html += '<p class="mt-2 text-xs text-amber-300/90">Nécessite : ' +
+                                esc(item.requiresOneOf.map(function (id) { return blockById(id) && blockById(id).name; }).filter(Boolean).join(" ou ")) +
+                                "</p>";
+                        }
+                        html += "</div>" +
+                            '<div class="text-right shrink-0">' +
+                            '<div class="text-lg font-semibold text-gold">' + esc(formatPrice(item.price)) + "</div>";
+                        if (counts[item.id]) html += '<div class="mt-1 text-xs text-gray-500">×' + counts[item.id] + " sélectionné(s)</div>";
+                        html += "</div></div>" +
+                            '<button type="button" data-pkg-add="' + esc(item.id) + '" ' + (disabled ? "disabled " : "") + 'class="mt-4 w-full rounded-xl px-3 py-2 text-sm font-medium transition ' +
+                            (disabled ? "bg-white/10 text-gray-500 cursor-not-allowed" : "bg-gold text-midnight hover:bg-goldLight") +
+                            '">' + (disabled ? "Déjà inclus ou ajouté" : "Ajouter") + "</button></div>";
+                    });
+                    html += "</div></section>";
+                });
+                elAvailable.innerHTML = html;
+            }
+
+            function renderCart() {
+                var sBlocks = getSelectedBlocks();
+                var html = "";
+                sBlocks.forEach(function (item, index) {
+                    html += '<div class="rounded-2xl border border-white/12 bg-midnight/60 p-4">' +
+                        '<div class="flex items-start justify-between gap-3">' +
+                        '<div class="min-w-0">' +
+                        '<div class="text-sm text-gold">' + esc(item.category) + "</div>" +
+                        '<div class="mt-1 font-medium text-white">' + esc(item.name) + "</div>" +
+                        '<p class="mt-2 text-sm leading-relaxed text-gray-400">' + esc(item.description) + "</p>" +
+                        "</div>" +
+                        '<div class="text-right shrink-0">' +
+                        '<div class="font-semibold text-gold">' + esc(formatPrice(item.price)) + "</div>";
+                    if (item.id !== "foundation-base") {
+                        html += '<button type="button" data-pkg-remove="' + index + '" class="mt-2 text-xs text-gray-500 hover:text-gold">Retirer</button>';
+                    }
+                    html += "</div></div>";
+                    if (item.id === "foundation-base") {
+                        html += '<div class="mt-4 space-y-4">' +
+                            '<div class="rounded-xl border border-gold/25 bg-gold/10 p-3">' +
+                            '<div class="text-xs font-medium uppercase tracking-[0.18em] text-gold">Inclus dans la Fondation</div>' +
+                            '<div class="mt-3 grid gap-2 sm:grid-cols-2 text-sm text-gray-200">' +
+                            "<div>• Cadrage audience & offre</div>" +
+                            "<div>• Architecture du site & logique de conversion</div>" +
+                            "<div>• Une landing page sur mesure</div>" +
+                            "<div>• Messages clés & rédaction web</div>" +
+                            "<div>• Pilotage contenu produit & coordination projet</div>" +
+                            "<div>• Passage design / intégration</div>" +
+                            "<div>• Mise en ligne & recette de base</div>" +
+                            "<div>• 3 mois de maintenance légère</div>" +
+                            "</div></div>" +
+                            '<div class="grid gap-3 sm:grid-cols-2">' +
+                            '<div class="rounded-xl border border-emerald-500/25 bg-emerald-500/10 p-3">' +
+                            '<div class="text-xs font-medium uppercase tracking-[0.18em] text-emerald-300">Stratégie & contenu</div>' +
+                            '<div class="mt-2 text-sm leading-relaxed text-gray-200">Cadrage de l’offre, priorités audience, coordination product owner, messages clés et rédaction des sections incluses.</div>' +
+                            "</div>" +
+                            '<div class="rounded-xl border border-violet-500/25 bg-violet-500/10 p-3">' +
+                            '<div class="text-xs font-medium uppercase tracking-[0.18em] text-violet-300">Design & développement web</div>' +
+                            '<div class="mt-2 text-sm leading-relaxed text-gray-200">Direction artistique, intégration front/back, accompagnement au lancement et maintenance légère post-mise en ligne.</div>' +
+                            "</div></div></div>";
+                    }
+                    html += "</div>";
+                });
+                elCart.innerHTML = html;
+
+                var total = getTotal();
+                elTotal.innerHTML =
+                    '<div class="flex items-center justify-between text-sm text-gray-400">' +
+                    "<span>Total estimé</span><span>" + sBlocks.length + " blocs</span></div>" +
+                    '<div class="mt-2 text-3xl font-semibold text-gold tabular-nums">' + esc(formatPrice(total)) + "</div>" +
+                    '<p class="mt-2 text-xs leading-relaxed text-gray-500">Prix indicatifs, blocs indépendants — regroupez-les ensuite en 2 ou 3 offres client.</p>';
+
+                var missing = getMissingDependencies();
+                if (missing.length) {
+                    elDeps.innerHTML = '<div class="rounded-2xl border border-amber-500/25 bg-amber-500/10 p-4">' +
+                        '<div class="text-sm font-medium text-amber-300">Dépendances manquantes</div>' +
+                        '<ul class="mt-2 space-y-2 text-sm text-amber-100/90">' +
+                        missing.map(function (w) {
+                            return "<li><span class=\"font-medium\">" + esc(w.item) + '</span> <span class="text-amber-100/70">nécessite</span> ' + esc(w.dependsOn.join(" ou ")) + "</li>";
+                        }).join("") +
+                        "</ul></div>";
+                } else {
+                    elDeps.innerHTML = "";
+                }
+
+                elTips.innerHTML =
+                    '<div class="font-medium text-white mb-2">Logique de construction recommandée</div>' +
+                    '<ol class="space-y-1 list-decimal list-inside text-gray-400">' +
+                    "<li>Foundation incluse par défaut</li>" +
+                    "<li>Ajouter des pages si elles servent le récit commercial</li>" +
+                    "<li>Ajouter conversion et capture de leads</li>" +
+                    "<li>Back-office et suivi si besoin</li>" +
+                    "<li>Terminer par SEO et conformité</li>" +
+                    "</ol>";
+            }
+
+            function render() { renderPresets(); renderAvailable(); renderCart(); }
+
+            document.getElementById("pkg-reset").addEventListener("click", function () {
+                selected = ["foundation-base"];
+                render();
+            });
+
+            document.getElementById("devis").addEventListener("click", function (e) {
+                var presetBtn = e.target.closest("[data-pkg-preset]");
+                if (presetBtn) {
+                    applyPreset(presetBtn.getAttribute("data-pkg-preset"));
+                    return;
+                }
+                var addBtn = e.target.closest("[data-pkg-add]");
+                if (addBtn && !addBtn.disabled) {
+                    addBlock(addBtn.getAttribute("data-pkg-add"));
+                    return;
+                }
+                var rm = e.target.closest("[data-pkg-remove]");
+                if (rm) removeAt(parseInt(rm.getAttribute("data-pkg-remove"), 10));
+            });
+
+            document.getElementById("devis").addEventListener("dragstart", function (e) {
+                var card = e.target.closest("[data-pkg-drag]");
+                if (!card || card.getAttribute("draggable") === "false") return;
+                draggedId = card.getAttribute("data-pkg-drag");
+                e.dataTransfer.setData("text/plain", draggedId);
+                e.dataTransfer.effectAllowed = "copy";
+                card.classList.add("opacity-70");
+            });
+
+            document.getElementById("devis").addEventListener("dragend", function (e) {
+                var card = e.target.closest("[data-pkg-drag]");
+                if (card) card.classList.remove("opacity-70");
+                draggedId = null;
+                cartZone.classList.remove("ring-2", "ring-gold/50");
+            });
+
+            function allowDrop(e) { e.preventDefault(); }
+            cartZone.addEventListener("dragenter", function (e) {
+                allowDrop(e);
+                cartZone.classList.add("ring-2", "ring-gold/50");
+            });
+            cartZone.addEventListener("dragover", allowDrop);
+            cartZone.addEventListener("dragleave", function (e) {
+                if (!cartZone.contains(e.relatedTarget)) cartZone.classList.remove("ring-2", "ring-gold/50");
+            });
+            cartZone.addEventListener("drop", function (e) {
+                e.preventDefault();
+                cartZone.classList.remove("ring-2", "ring-gold/50");
+                var id = e.dataTransfer.getData("text/plain") || draggedId;
+                if (id) addBlock(id);
+                draggedId = null;
+            });
+
+            function setupQuoteTransfer() {
+                var transferBtn = document.getElementById("btn-transfer-quote");
+                var messageField = document.getElementById("message_projet");
+                var contactSection = document.getElementById("contact");
+                if (!transferBtn || !messageField || !contactSection) return;
+
+                transferBtn.addEventListener("click", function () {
+                    var selectedBlocks = getSelectedBlocks();
+                    var total = getTotal();
+                    var lines = selectedBlocks.map(function (item) {
+                        return "- " + item.name + " (" + item.price + " €)";
+                    });
+                    var summary =
+                        "Bonjour Sakina,\n\n" +
+                        "Voici le détail de la configuration souhaitee pour un total estime de " +
+                        total +
+                        " € :\n\n" +
+                        lines.join("\n") +
+                        "\n\nJe souhaiterais en discuter avec vous.";
+
+                    messageField.value = summary;
+                    contactSection.scrollIntoView({ behavior: "smooth" });
+                    setTimeout(function () {
+                        messageField.focus();
+                    }, 300);
+                });
+            }
+
+            render();
+            setupQuoteTransfer();
+        })();
+
+        (function () {
+            var form = document.getElementById("contact-form");
+            var btn = document.getElementById("contact-submit");
+            var success = document.getElementById("contact-success");
+            if (!form || !btn || !success) return;
+
+            var params = new URLSearchParams(window.location.search);
+            if (params.get("sent") === "1") {
+                success.classList.remove("hidden");
+                var cleanUrl = window.location.pathname + "#contact";
+                window.history.replaceState({}, "", cleanUrl);
+            }
+
+            var defaultLabel = btn.textContent.trim();
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                btn.disabled = true;
+                btn.textContent = "Envoi en cours...";
+
+                fetch(form.action, {
+                    method: "POST",
+                    body: new FormData(form),
+                    headers: { Accept: "application/json" },
+                })
+                    .then(function (res) {
+                        if (!res.ok) throw new Error("Network response was not ok");
+                        return res.json().catch(function () {
+                            return {};
+                        });
+                    })
+                    .then(function () {
+                        window.location.href = "./oraclase.html?sent=1#contact";
+                    })
+                    .catch(function () {
+                        alert("Une erreur est survenue. Reessayez dans quelques instants.");
+                    })
+                    .finally(function () {
+                        btn.disabled = false;
+                        btn.textContent = defaultLabel;
+                    });
+            });
+        })();
+
+        (function () {
+            var revealEls = document.querySelectorAll(".fade-in-up");
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("revealed");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.14 });
+            revealEls.forEach(function (el) { observer.observe(el); });
+        })();
+    </script>
+</body>
+</html>
