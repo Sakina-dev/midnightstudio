@@ -1,0 +1,3214 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midnight Studio — UX/UI, Développement Web &amp; SEO | Portfolio</title>
+    <meta name="description" content="Midnight Studio : design UX/UI, développement web full-stack et SEO. Sites sur mesure, performance Lighthouse et identité visuelle pour marques exigeantes. Mulhouse &amp; remote.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Midnight Studio">
+    <meta name="theme-color" content="#0B132B">
+    <meta name="color-scheme" content="dark">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="canonical" href="/" id="canonical-url">
+    <link rel="icon" href="./midnight_logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="./midnight_logo.png">
+    <link rel="manifest" href="./site.webmanifest">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Midnight Studio">
+    <meta property="og:title" content="Midnight Studio — UX/UI, Développement Web &amp; SEO">
+    <meta property="og:description" content="Portfolio de Midnight Studio : design qui séduit, technique qui performe. UX, développement et SEO pour des marques qui visent l'excellence.">
+    <meta property="og:image" content="./midnight_logo.webp" id="og-image">
+    <meta property="og:url" content="/" id="og-url">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Midnight Studio — UX/UI, Développement Web &amp; SEO">
+    <meta name="twitter:description" content="Design UX/UI, développement full-stack et SEO. Sites sur mesure, performance Lighthouse.">
+    <meta name="twitter:image" content="./midnight_logo.webp" id="twitter-image">
+
+    <script>
+        (function () {
+            var origin = location.origin;
+            var url = origin + location.pathname.replace(/index\.html$/i, "").replace(/\/?$/, "/");
+            var canon = document.getElementById("canonical-url");
+            var ogUrl = document.getElementById("og-url");
+            var ogImage = document.getElementById("og-image");
+            var twitterImage = document.getElementById("twitter-image");
+            if (canon) canon.href = url;
+            if (ogUrl) ogUrl.content = url;
+            if (ogImage) ogImage.content = origin + "/midnight_logo.webp";
+            if (twitterImage) twitterImage.content = origin + "/midnight_logo.webp";
+        })();
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "ProfessionalService",
+                "@id": "#organization",
+                "name": "Midnight Studio",
+                "description": "Studio de design UX/UI, développement web full-stack et SEO. Création de sites sur mesure et identités visuelles.",
+                "email": "midnightstudio162@gmail.com",
+                "founder": {
+                    "@type": "Person",
+                    "name": "Sakina"
+                },
+                "areaServed": {
+                    "@type": "Country",
+                    "name": "France"
+                },
+                "knowsAbout": [
+                    "UX Design",
+                    "UI Design",
+                    "Développement Web",
+                    "SEO",
+                    "Performance Web",
+                    "Identité visuelle"
+                ],
+                "image": "./midnight_logo.webp",
+                "sameAs": []
+            },
+            {
+                "@type": "WebSite",
+                "@id": "#website",
+                "name": "Midnight Studio",
+                "description": "Portfolio Midnight Studio — UX, développement et SEO.",
+                "publisher": { "@id": "#organization" },
+                "inLanguage": ["fr", "en", "de"]
+            },
+            {
+                "@type": "WebPage",
+                "@id": "#webpage",
+                "name": "Midnight Studio — Portfolio",
+                "description": "Design qui séduit. Technique qui performe. UX, développement et SEO pour des marques qui visent l'excellence.",
+                "isPartOf": { "@id": "#website" },
+                "about": { "@id": "#organization" },
+                "inLanguage": "fr"
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://formspree.io">
+
+    <link rel="preload" as="image" href="./midnight_logo.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="./backgroundblue.webp" media="(max-width: 767px)">
+
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Syne:wght@600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Syne:wght@600;700;800&display=swap"></noscript>
+
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        midnight: "#0B132B",
+                        midnightLight: "#1C2541",
+                        gold: "#D4AF37",
+                        goldLight: "#F3E5AB",
+                        champagne: "#F7E7CE",
+                        warmGlow: "#E8C872"
+                    },
+                    fontFamily: {
+                        sans: ["DM Sans", "sans-serif"],
+                        display: ["Syne", "sans-serif"]
+                    },
+                    boxShadow: {
+                        goldGlow: "0 0 0 1px rgba(212,175,55,.3), 0 0 28px rgba(212,175,55,.4), 0 4px 24px rgba(232,200,114,.15)",
+                        soft: "0 10px 40px rgba(0,0,0,.28)",
+                        warm: "0 12px 48px rgba(212,175,55,.12)"
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        :root {
+            --midnight: #0B132B;
+            --gold: #D4AF37;
+            --gold-light: #F3E5AB;
+            --champagne: #F7E7CE;
+        }
+
+        @keyframes aurora-drift {
+            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+            50% { transform: translate(2%, -1.5%) scale(1.04); opacity: 0.9; }
+        }
+
+        @keyframes orb-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes shimmer-line {
+            0%, 100% { opacity: 0.65; }
+            50% { opacity: 1; }
+        }
+
+        .aurora-layer {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            background:
+                radial-gradient(ellipse 85% 55% at 15% 15%, rgba(212, 175, 55, 0.16), transparent 58%),
+                radial-gradient(ellipse 65% 50% at 88% 22%, rgba(147, 197, 253, 0.14), transparent 52%),
+                radial-gradient(ellipse 75% 60% at 55% 95%, rgba(251, 191, 36, 0.1), transparent 58%),
+                radial-gradient(ellipse 50% 40% at 70% 65%, rgba(243, 229, 171, 0.08), transparent 55%);
+            animation: aurora-drift 20s ease-in-out infinite;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .aurora-layer,
+            .decor-orb-animated {
+                animation: none;
+            }
+        }
+
+        .accent-line {
+            width: 5rem;
+            height: 3px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 9999px;
+            background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), var(--gold), transparent);
+            animation: shimmer-line 4s ease-in-out infinite;
+        }
+
+        html {
+            scroll-padding-top: 5.5rem;
+            overflow-x: clip;
+            max-width: 100%;
+        }
+
+        body {
+            overflow-x: clip;
+            max-width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            html {
+                scroll-padding-top: 2rem;
+            }
+        }
+
+        body.nav-open {
+            overflow: hidden;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 1rem;
+            z-index: 200;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            background: var(--gold);
+            color: var(--midnight);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .skip-link:focus {
+            top: 1rem;
+        }
+
+        .section-lazy {
+            content-visibility: auto;
+            contain-intrinsic-size: auto 720px;
+        }
+
+        @media (max-width: 767px) {
+            .hero-inner {
+                will-change: auto;
+            }
+
+            .aurora-layer,
+            .decor-orb-animated,
+            .decor-orb-animated-delay {
+                animation-duration: 28s;
+            }
+        }
+
+        picture {
+            display: contents;
+        }
+
+        .page-backdrop {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .page-backdrop-image {
+            position: absolute;
+            inset: 0;
+            background-image: image-set(url("./backgroundblue.webp") type("image/webp"), url("./backgroundblue.png") type("image/png"));
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            transform: translateZ(0);
+        }
+
+        .page-backdrop-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(5, 9, 20, 0.72) 0%,
+                rgba(11, 19, 43, 0.78) 50%,
+                rgba(5, 9, 20, 0.88) 100%
+            );
+        }
+
+        @media (max-width: 767px) {
+            .page-backdrop-overlay {
+                background: linear-gradient(
+                    to bottom,
+                    rgba(5, 9, 20, 0.5) 0%,
+                    rgba(11, 19, 43, 0.62) 50%,
+                    rgba(5, 9, 20, 0.74) 100%
+                );
+            }
+        }
+
+        .page-backdrop .aurora-layer {
+            position: absolute;
+        }
+
+        .site-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            max-width: 100%;
+            z-index: 100;
+        }
+
+        .nav-mobile {
+            position: relative;
+            z-index: 111;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 0.9rem max(1.15rem, env(safe-area-inset-right)) 0.9rem max(1.15rem, env(safe-area-inset-left));
+            padding-top: max(0.9rem, env(safe-area-inset-top));
+            border-bottom: 1px solid rgba(212, 175, 55, 0.22);
+            background: rgba(11, 19, 43, 0.94);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.28);
+        }
+
+        @media (min-width: 768px) {
+            .nav-mobile {
+                display: none;
+            }
+        }
+
+        .nav-mobile-logo {
+            font-family: "Syne", sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            color: #fff;
+            line-height: 1.2;
+            min-width: 0;
+            flex: 1 1 auto;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding-right: 0.75rem;
+        }
+
+        .nav-mobile-logo span {
+            color: var(--gold-light);
+            font-weight: 600;
+        }
+
+        .nav-toggle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.75rem;
+            height: 2.75rem;
+            border-radius: 0.75rem;
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--gold-light);
+            transition: border-color 0.25s ease, background-color 0.25s ease;
+        }
+
+        .nav-toggle:hover,
+        .nav-toggle:focus-visible {
+            border-color: rgba(212, 175, 55, 0.65);
+            background: rgba(212, 175, 55, 0.1);
+            outline: none;
+        }
+
+        .nav-toggle-box {
+            position: relative;
+            display: block;
+            width: 1.15rem;
+            height: 0.9rem;
+        }
+
+        .nav-toggle-line {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            border-radius: 9999px;
+            background: currentColor;
+            transition: transform 0.28s ease, opacity 0.2s ease, top 0.28s ease;
+        }
+
+        .nav-toggle-line:nth-child(1) { top: 0; }
+        .nav-toggle-line:nth-child(2) { top: 0.4rem; }
+        .nav-toggle-line:nth-child(3) { top: 0.8rem; }
+
+        .nav-toggle[aria-expanded="true"] .nav-toggle-line:nth-child(1) {
+            top: 0.4rem;
+            transform: rotate(45deg);
+        }
+
+        .nav-toggle[aria-expanded="true"] .nav-toggle-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-toggle[aria-expanded="true"] .nav-toggle-line:nth-child(3) {
+            top: 0.4rem;
+            transform: rotate(-45deg);
+        }
+
+        .nav-desktop {
+            position: fixed;
+            top: 1.5rem;
+            right: 1.5rem;
+            z-index: 100;
+            display: none;
+            max-width: min(100%, calc(100vw - 1.5rem));
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            border-radius: 9999px;
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            background: rgba(15, 24, 53, 0.88);
+            padding: 0.875rem 2rem;
+            box-shadow: 0 12px 48px rgba(212, 175, 55, 0.12);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+        }
+
+        @media (min-width: 768px) {
+            .nav-desktop {
+                display: flex;
+            }
+        }
+
+        .nav-drawer {
+            position: fixed;
+            inset: 0;
+            z-index: 110;
+            display: flex;
+            flex-direction: column;
+            padding: calc(4.75rem + env(safe-area-inset-top)) max(1.5rem, env(safe-area-inset-right)) max(1.75rem, env(safe-area-inset-bottom)) max(1.5rem, env(safe-area-inset-left));
+            background:
+                radial-gradient(ellipse 90% 55% at 50% 0%, rgba(212, 175, 55, 0.12), transparent 58%),
+                rgba(5, 9, 20, 0.97);
+            backdrop-filter: blur(22px);
+            -webkit-backdrop-filter: blur(22px);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(1rem);
+            transition: opacity 0.32s ease, visibility 0.32s ease, transform 0.32s ease;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        @media (min-width: 768px) {
+            .nav-drawer {
+                display: none;
+            }
+        }
+
+        .nav-drawer.is-open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .nav-drawer-label {
+            font-family: "DM Sans", sans-serif;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: rgba(212, 175, 55, 0.75);
+            margin-bottom: 1.25rem;
+        }
+
+        .nav-drawer-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            flex: 1;
+        }
+
+        .nav-drawer-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            font-family: "Syne", sans-serif;
+            font-size: clamp(1.85rem, 7.5vw, 2.4rem);
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            color: #fff;
+            transition: color 0.25s ease, padding-left 0.25s ease;
+            min-height: 3.25rem;
+        }
+
+        .nav-drawer-link::after {
+            content: "→";
+            font-size: 1.15rem;
+            color: rgba(212, 175, 55, 0.55);
+            transition: transform 0.25s ease, color 0.25s ease;
+        }
+
+        .nav-drawer-link:hover,
+        .nav-drawer-link:focus-visible {
+            color: var(--gold-light);
+            padding-left: 0.35rem;
+            outline: none;
+        }
+
+        .nav-drawer-link:hover::after,
+        .nav-drawer-link:focus-visible::after {
+            color: var(--gold);
+            transform: translateX(4px);
+        }
+
+        .nav-drawer-footer {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .nav-drawer-lang {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.35rem;
+            border-radius: 9999px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .nav-drawer-lang .lang-switch-btn {
+            min-width: 2.75rem;
+            min-height: 2.75rem;
+            padding: 0.5rem 0.85rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+        }
+
+        .nav-drawer-cta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 3.25rem;
+            padding: 0.95rem 1.25rem;
+            border-radius: 0.85rem;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            text-align: center;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .nav-drawer,
+            .nav-toggle-line,
+            .nav-drawer-link {
+                transition: none;
+            }
+
+            .nav-drawer.is-open {
+                transform: none;
+            }
+        }
+
+        .hero-gradient-text {
+            background: linear-gradient(118deg, #ffffff 0%, var(--champagne) 38%, var(--gold-light) 62%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .heading-display {
+            font-family: "Syne", sans-serif;
+            letter-spacing: -0.02em;
+            text-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .heading-accent {
+            font-family: "DM Sans", sans-serif;
+            font-style: italic;
+            font-weight: 400;
+            color: var(--gold-light);
+        }
+
+        .label-caps {
+            font-family: "Syne", sans-serif;
+            letter-spacing: 0.28em;
+            color: var(--gold-light);
+        }
+
+        .text-muted {
+            color: rgba(243, 245, 250, 0.86);
+        }
+
+        .text-body {
+            color: rgba(255, 255, 255, 0.96);
+        }
+
+        .section-contrast {
+            background: linear-gradient(180deg, rgba(5, 9, 22, 0.88) 0%, rgba(12, 20, 42, 0.78) 50%, rgba(5, 9, 22, 0.9) 100%);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.14);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+
+        .tag-pill {
+            color: rgba(255, 255, 255, 0.92);
+            border-color: rgba(255, 255, 255, 0.38);
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .project-label {
+            color: var(--gold-light);
+            font-weight: 700;
+            letter-spacing: 0.2em;
+        }
+
+        .section-veil::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 80% 55% at 50% -10%, rgba(212, 175, 55, 0.09), transparent 68%);
+            pointer-events: none;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #E8C872 0%, #D4AF37 48%, #C9A227 100%);
+        }
+
+        .btn-gold:hover {
+            background: linear-gradient(135deg, #F3E5AB 0%, #E8C872 50%, #D4AF37 100%);
+        }
+
+        .title-fluid {
+            font-size: clamp(2.4rem, 5vw, 5.1rem);
+            line-height: 1.05;
+        }
+
+        .subtitle-fluid {
+            font-size: clamp(1.1rem, 2vw, 1.65rem);
+        }
+
+        .body-fluid {
+            font-size: clamp(0.95rem, 1.25vw, 1.1rem);
+        }
+
+        .hero-brand {
+            margin-bottom: clamp(1.5rem, 3.5vw, 2.25rem);
+        }
+
+        .hero-logo-mark {
+            width: clamp(5.75rem, 16vw, 8.25rem);
+            margin: 0 auto;
+            overflow: hidden;
+            line-height: 0;
+            position: relative;
+            animation: hero-logo-float 5.5s ease-in-out infinite;
+        }
+
+        .hero-logo-mark::after {
+            content: "";
+            position: absolute;
+            inset: -12%;
+            border-radius: 9999px;
+            border: 1px solid rgba(212, 175, 55, 0.22);
+            animation: hero-logo-pulse 3.2s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes hero-logo-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-7px); }
+        }
+
+        @keyframes hero-logo-pulse {
+            0%, 100% { opacity: 0.35; transform: scale(0.96); }
+            50% { opacity: 0.85; transform: scale(1.04); }
+        }
+
+        .hero-logo-mark img {
+            width: 100%;
+            max-width: 100%;
+            margin-left: 0;
+            display: block;
+            clip-path: inset(0 0 31% 0);
+            filter: drop-shadow(0 0 28px rgba(212, 175, 55, 0.38));
+        }
+
+        .hero-headline {
+            margin-bottom: clamp(1.25rem, 3vw, 1.75rem);
+            line-height: 1.02;
+        }
+
+        .hero-line-1 {
+            display: block;
+            font-family: "Syne", sans-serif;
+            font-weight: 800;
+            font-size: clamp(2.35rem, 6.2vw, 5.25rem);
+            letter-spacing: -0.03em;
+            color: #fff;
+            text-shadow: 0 4px 28px rgba(0, 0, 0, 0.45);
+        }
+
+        .hero-line-2 {
+            display: inline-block;
+            margin-top: 0.35em;
+            font-family: "DM Sans", sans-serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: clamp(1.45rem, 3.6vw, 3.15rem);
+            line-height: 1.15;
+            background: linear-gradient(110deg, var(--champagne) 0%, var(--gold-light) 38%, var(--gold) 62%, var(--gold-light) 100%);
+            background-size: 220% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: hero-gold-shimmer 7s ease-in-out infinite;
+        }
+
+        @keyframes hero-gold-shimmer {
+            0%, 100% { background-position: 0% center; }
+            50% { background-position: 100% center; }
+        }
+
+        .hero-cursor {
+            display: inline-block;
+            width: 0.12em;
+            height: 0.82em;
+            margin-left: 0.08em;
+            vertical-align: -0.06em;
+            background: var(--gold);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.65);
+            animation: hero-cursor-blink 1.05s step-end infinite;
+        }
+
+        @keyframes hero-cursor-blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+
+        .hero-lead {
+            font-size: clamp(1rem, 1.45vw, 1.15rem);
+            color: rgba(255, 255, 255, 0.88);
+            max-width: 34rem;
+            margin: 0 auto clamp(2rem, 4vw, 2.75rem);
+            line-height: 1.6;
+        }
+
+        .hero-inner > .hero-brand { animation: hero-rise 0.9s cubic-bezier(.22,.61,.36,1) 0.05s both; }
+        .hero-inner > .hero-headline { animation: hero-rise 0.9s cubic-bezier(.22,.61,.36,1) 0.18s both; }
+        .hero-inner > .hero-lead { animation: hero-rise 0.9s cubic-bezier(.22,.61,.36,1) 0.32s both; }
+        .hero-inner > .hero-cta { animation: hero-rise 0.9s cubic-bezier(.22,.61,.36,1) 0.42s both; }
+
+        @keyframes hero-rise {
+            from { opacity: 0; transform: translateY(22px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .hero-logo-mark,
+            .hero-logo-mark::after,
+            .hero-line-2,
+            .hero-cursor {
+                animation: none;
+            }
+
+            .hero-inner > * {
+                animation: none !important;
+            }
+
+            .hero-spotlight {
+                display: none;
+            }
+
+            .hero-inner {
+                transform: none !important;
+            }
+
+            .hero-frame-ui,
+            .hero-frame::before {
+                opacity: 1;
+            }
+        }
+
+        .hero-stage {
+            isolation: isolate;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: clip;
+        }
+
+        .hero-spotlight {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+            background: radial-gradient(
+                520px circle at var(--hero-mx, 50%) var(--hero-my, 42%),
+                rgba(212, 175, 55, 0.16) 0%,
+                rgba(212, 175, 55, 0.05) 28%,
+                transparent 58%
+            );
+            transition: opacity 0.35s ease;
+        }
+
+        .hero-inner {
+            transform-style: preserve-3d;
+            will-change: transform;
+            transition: transform 0.2s ease-out;
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
+        }
+
+        @media (max-width: 767px) {
+            .hero-inner {
+                transform: none !important;
+            }
+
+            .hero-line-1,
+            .hero-line-2,
+            .hero-lead {
+                overflow-wrap: anywhere;
+                word-break: normal;
+            }
+
+            .hero-cta {
+                width: 100%;
+                max-width: 22rem;
+                margin-inline: auto;
+            }
+
+            .hero-cta .magnetic {
+                width: 100%;
+            }
+
+            .decor-orb {
+                opacity: 0.75;
+            }
+        }
+
+        .hero-frame {
+            position: relative;
+            display: inline-block;
+            padding: clamp(0.85rem, 2vw, 1.35rem) clamp(1rem, 2.5vw, 1.75rem);
+            text-align: center;
+        }
+
+        .hero-frame::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border: 1px dashed rgba(162, 89, 255, 0.55);
+            border-radius: 0.35rem;
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            pointer-events: none;
+        }
+
+        .hero-frame:hover::before,
+        .hero-frame:focus-within::before {
+            opacity: 1;
+        }
+
+        .hero-frame-ui {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            pointer-events: none;
+        }
+
+        .hero-frame:hover .hero-frame-ui,
+        .hero-frame:focus-within .hero-frame-ui {
+            opacity: 1;
+        }
+
+        .hero-frame-label {
+            position: absolute;
+            top: -1.45rem;
+            left: 0;
+            font-family: "DM Sans", sans-serif;
+            font-size: 0.62rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #c9a4ff;
+            white-space: nowrap;
+        }
+
+        .hero-frame-handle {
+            position: absolute;
+            width: 0.55rem;
+            height: 0.55rem;
+            background: #fff;
+            border: 1px solid #a259ff;
+            border-radius: 1px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35);
+        }
+
+        .hero-frame-handle--tl { top: -0.28rem; left: -0.28rem; }
+        .hero-frame-handle--tr { top: -0.28rem; right: -0.28rem; }
+        .hero-frame-handle--bl { bottom: -0.28rem; left: -0.28rem; }
+        .hero-frame-handle--br { bottom: -0.28rem; right: -0.28rem; }
+
+        .hero-line-1.is-decoding {
+            text-shadow:
+                0 4px 28px rgba(0, 0, 0, 0.45),
+                2px 0 rgba(212, 175, 55, 0.35),
+                -2px 0 rgba(147, 197, 253, 0.25);
+        }
+
+        .glass {
+            background: linear-gradient(155deg, rgba(255, 255, 255, 0.13) 0%, rgba(20, 30, 58, 0.72) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 12px 40px rgba(0, 0, 0, 0.35);
+        }
+
+        .glass:hover {
+            border-color: rgba(212, 175, 55, 0.45);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14), 0 16px 48px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(212, 175, 55, 0.12);
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 850ms ease, transform 850ms cubic-bezier(.22,.61,.36,1);
+        }
+
+        .fade-in-up.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .magnetic {
+            transition: transform .25s ease, box-shadow .3s ease, background-color .3s ease, color .3s ease;
+            will-change: transform;
+        }
+
+        .gold-glow:hover {
+            box-shadow: 0 0 0 1px rgba(212,175,55,.4), 0 0 22px rgba(212,175,55,.45), 0 0 40px rgba(232,200,114,.2);
+        }
+
+        .decor-orb {
+            position: absolute;
+            border-radius: 9999px;
+            filter: blur(90px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .decor-orb-animated {
+            animation: orb-float 9s ease-in-out infinite;
+        }
+
+        .decor-orb-animated-delay {
+            animation: orb-float 11s ease-in-out infinite;
+            animation-delay: -3s;
+        }
+
+        #cursor-dot {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 14px;
+            height: 14px;
+            border-radius: 9999px;
+            background: rgba(212,175,55,0.92);
+            box-shadow: 0 0 14px rgba(212,175,55,0.65);
+            pointer-events: none;
+            z-index: 70;
+            transform: translate(-50%, -50%);
+            transition: width .2s ease, height .2s ease, background-color .2s ease, opacity .2s ease;
+            opacity: 0;
+        }
+
+        #cursor-dot.active {
+            width: 28px;
+            height: 28px;
+            background: rgba(212,175,55,0.55);
+        }
+
+        @media (pointer: fine) {
+            body.custom-cursor * {
+                cursor: none !important;
+            }
+        }
+
+        .design-carousel {
+            --slide-index: 0;
+        }
+
+        .design-carousel .carousel-track {
+            display: flex;
+            height: 100%;
+            transition: transform 650ms cubic-bezier(.22,.61,.36,1);
+            transform: translateX(calc(var(--slide-index) * -100%));
+        }
+
+        .design-carousel .carousel-slide {
+            flex: 0 0 100%;
+            min-width: 100%;
+            position: relative;
+        }
+
+        .design-carousel .carousel-slide img {
+            transition: transform 800ms cubic-bezier(.22,.61,.36,1);
+        }
+
+        .design-carousel:hover .carousel-slide.is-active img {
+            transform: scale(1.02);
+        }
+
+        .design-carousel .carousel-dot.is-active {
+            background: var(--gold);
+            box-shadow: 0 0 10px rgba(212,175,55,.45);
+        }
+
+        .carousel-thumb {
+            flex: 0 0 auto;
+            width: 4.5rem;
+            height: 3.25rem;
+            border-radius: 0.65rem;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,.12);
+            opacity: 0.55;
+            transition: opacity .3s ease, border-color .3s ease, box-shadow .3s ease;
+        }
+
+        .carousel-thumb.is-active {
+            opacity: 1;
+            border-color: rgba(212,175,55,.65);
+            box-shadow: 0 0 16px rgba(212,175,55,.25);
+        }
+
+        .carousel-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .stage-scope-card {
+            transition: border-color .35s ease, box-shadow .35s ease, transform .35s ease;
+            border-color: rgba(255, 255, 255, 0.22);
+            background: linear-gradient(160deg, rgba(255, 255, 255, 0.1) 0%, rgba(15, 24, 48, 0.75) 100%);
+        }
+
+        .stage-scope-card:hover {
+            border-color: rgba(212,175,55,.5);
+            box-shadow: 0 0 24px rgba(212,175,55,.18);
+            transform: translateY(-2px);
+        }
+
+        .stage-scope-card p {
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .business-card-scene {
+            perspective: 1400px;
+            width: 100%;
+            max-width: 18rem;
+            margin-left: auto;
+            margin-right: auto;
+            aspect-ratio: 5 / 8;
+        }
+
+        .business-card-scene--landscape {
+            max-width: 22rem;
+            aspect-ratio: 85 / 55;
+        }
+
+        .business-card-flip {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.75s cubic-bezier(.22, .61, .36, 1);
+            cursor: pointer;
+        }
+
+        .business-card-scene:hover .business-card-flip,
+        .business-card-scene:focus-within .business-card-flip,
+        .business-card-scene.is-flipped .business-card-flip {
+            transform: rotateY(180deg);
+        }
+
+        .business-card-face {
+            position: absolute;
+            inset: 0;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            overflow: hidden;
+            background: transparent;
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .business-card-face.back {
+            transform: rotateY(180deg);
+        }
+
+        .business-card-face img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            padding: 0;
+            margin: 0;
+            border: none;
+            background: transparent;
+        }
+
+        .business-card-scene:hover .business-card-face img,
+        .business-card-scene:focus-within .business-card-face img,
+        .business-card-scene.is-flipped .business-card-face img {
+            filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.55));
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .business-card-flip {
+                transition: none;
+            }
+            .business-card-scene.is-flipped .business-card-flip {
+                transform: rotateY(180deg);
+            }
+        }
+
+        .project-link-badge {
+            position: absolute;
+            inset-inline: 0;
+            bottom: 0;
+            z-index: 10;
+            display: flex;
+            align-items: flex-end;
+            padding: 3.5rem 1.25rem 1rem;
+            background: linear-gradient(to top, rgba(11, 19, 43, 0.92) 0%, rgba(11, 19, 43, 0.42) 58%, transparent 100%);
+            pointer-events: none;
+        }
+
+        .project-link-badge span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #e8d5a3;
+            transition: color 0.3s ease;
+        }
+
+        .group:hover .project-link-badge span {
+            color: #d4af37;
+        }
+
+        .web-projects-list {
+            counter-reset: webproj;
+        }
+
+        .web-project {
+            counter-increment: webproj;
+        }
+
+        .web-project-label::before {
+            content: counter(webproj, decimal-leading-zero) " · ";
+            color: rgba(212, 175, 55, 0.85);
+            font-weight: 700;
+        }
+
+        .web-project + .web-project {
+            padding-top: 3rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.12);
+        }
+
+        @media (min-width: 768px) {
+            .web-project + .web-project {
+                padding-top: 3.5rem;
+            }
+        }
+
+        .lighthouse-panel--compact .lighthouse-scores {
+            margin-bottom: 0;
+        }
+
+        .web-projects-shell {
+            position: relative;
+        }
+
+        .web-project-body {
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (min-width: 1024px) {
+            .web-project:not(.web-project--reverse) .web-project-body {
+                padding-left: 1.75rem;
+            }
+
+            .web-project.web-project--reverse .web-project-body {
+                padding-right: 1.75rem;
+            }
+
+            .web-project:not(.web-project--reverse) .web-project-media {
+                padding-right: 1.25rem;
+            }
+
+            .web-project.web-project--reverse .web-project-media {
+                padding-left: 1.25rem;
+            }
+        }
+
+        .web-project-media {
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (min-width: 1024px) {
+            .web-project-media {
+                position: sticky;
+                top: 6.5rem;
+                align-self: flex-start;
+            }
+        }
+
+        .web-project {
+            --project-glow: 212, 175, 55;
+        }
+
+        .web-project[data-glow="terracotta"] { --project-glow: 210, 140, 90; }
+        .web-project[data-glow="lavender"] { --project-glow: 180, 160, 220; }
+        .web-project[data-glow="rose"] { --project-glow: 232, 143, 163; }
+        .web-project[data-glow="coral"] { --project-glow: 255, 140, 120; }
+        .web-project[data-glow="sky"] { --project-glow: 100, 160, 220; }
+        .web-project[data-glow="violet"] { --project-glow: 140, 120, 220; }
+        .web-project[data-glow="mint"] { --project-glow: 90, 190, 170; }
+
+        .browser-mockup {
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            background: linear-gradient(160deg, rgba(255, 255, 255, 0.08) 0%, rgba(12, 20, 42, 0.9) 100%);
+            box-shadow:
+                0 22px 50px rgba(0, 0, 0, 0.45),
+                0 0 48px rgba(var(--project-glow), 0.18);
+            transition: box-shadow 0.45s ease, transform 0.35s ease;
+        }
+
+        .browser-mockup:hover {
+            box-shadow:
+                0 26px 56px rgba(0, 0, 0, 0.5),
+                0 0 60px rgba(var(--project-glow), 0.28);
+        }
+
+        .browser-mockup-chrome {
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.6rem 0.85rem;
+            background: rgba(10, 16, 36, 0.96);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .browser-mockup-dot {
+            width: 0.55rem;
+            height: 0.55rem;
+            border-radius: 9999px;
+            flex-shrink: 0;
+        }
+
+        .browser-mockup-dot:nth-child(1) { background: #ff5f57; }
+        .browser-mockup-dot:nth-child(2) { background: #febc2e; }
+        .browser-mockup-dot:nth-child(3) { background: #28c840; }
+
+        .browser-mockup-url {
+            flex: 1;
+            min-width: 0;
+            margin-left: 0.35rem;
+            padding: 0.3rem 0.65rem;
+            border-radius: 0.35rem;
+            background: rgba(0, 0, 0, 0.38);
+            font-size: 0.62rem;
+            letter-spacing: 0.04em;
+            color: rgba(255, 255, 255, 0.52);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .browser-mockup-viewport {
+            position: relative;
+            aspect-ratio: 16 / 10;
+            overflow: hidden;
+            background: #0a1020;
+        }
+
+        .browser-mockup-viewport::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(212, 175, 55, 0.1);
+            opacity: 0;
+            transition: opacity 0.45s ease;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .browser-mockup:hover .browser-mockup-viewport::after {
+            opacity: 1;
+        }
+
+        .browser-mockup-viewport .project-link-badge {
+            z-index: 3;
+        }
+
+        .browser-mockup-parallax {
+            width: 100%;
+            height: 100%;
+            will-change: transform;
+        }
+
+        .browser-mockup-viewport img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.65s cubic-bezier(.22, .61, .36, 1);
+        }
+
+        .browser-mockup:hover .browser-mockup-viewport img {
+            transform: scale(1.04);
+        }
+
+        .web-project-meta {
+            font-size: 0.72rem;
+            letter-spacing: 0.06em;
+            color: rgba(243, 229, 171, 0.72);
+            margin-bottom: 0.85rem;
+            line-height: 1.5;
+        }
+
+        .web-project-metrics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            list-style: none;
+            padding: 0;
+        }
+
+        .web-project-metrics li {
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.35rem 0.65rem;
+            border-radius: 9999px;
+            border: 1px solid rgba(var(--project-glow), 0.45);
+            background: rgba(var(--project-glow), 0.12);
+            color: rgba(255, 255, 255, 0.92);
+        }
+
+        .web-project-bullets {
+            margin: 0 0 1.25rem;
+            padding: 0;
+            list-style: none;
+        }
+
+        .web-project-bullets li {
+            position: relative;
+            padding-left: 1.1rem;
+            margin-bottom: 0.45rem;
+            font-size: 0.82rem;
+            color: rgba(243, 245, 250, 0.88);
+            line-height: 1.55;
+        }
+
+        .web-project-bullets li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 0.75rem;
+        }
+
+        .web-project-compare {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.65rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .web-project-compare-card {
+            padding: 0.75rem 0.85rem;
+            border-radius: 0.65rem;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .web-project-compare-card.is-after {
+            border-color: rgba(var(--project-glow), 0.45);
+            background: rgba(var(--project-glow), 0.1);
+        }
+
+        .web-project-compare-label {
+            display: block;
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(243, 229, 171, 0.75);
+            margin-bottom: 0.35rem;
+        }
+
+        .web-project-compare-card p {
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.45;
+            margin: 0;
+        }
+
+        .web-project-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 0.25rem;
+        }
+
+        .lighthouse-panel {
+            margin-bottom: 1.25rem;
+            padding: 0.85rem;
+            border-radius: 0.75rem;
+            border: 1px solid rgba(var(--project-glow), 0.35);
+            background: rgba(var(--project-glow), 0.08);
+        }
+
+        .lighthouse-panel-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.35rem 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .lighthouse-panel-title {
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(243, 229, 171, 0.85);
+        }
+
+        .lighthouse-panel-url {
+            font-size: 0.62rem;
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+        .lighthouse-scores {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+            margin-bottom: 0.65rem;
+        }
+
+        @media (min-width: 480px) {
+            .lighthouse-scores {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .lighthouse-score {
+            text-align: center;
+            padding: 0.55rem 0.25rem;
+            border-radius: 0.55rem;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(0, 0, 0, 0.22);
+        }
+
+        .lighthouse-score-value {
+            font-family: "Syne", sans-serif;
+            font-size: 1.25rem;
+            font-weight: 800;
+            line-height: 1;
+            color: #0cce6b;
+        }
+
+        .lighthouse-score-value.is-perfect {
+            color: #0cce6b;
+        }
+
+        .lighthouse-score-label {
+            display: block;
+            margin-top: 0.3rem;
+            font-size: 0.52rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.62);
+            line-height: 1.25;
+        }
+
+        .lighthouse-vitals {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.4rem;
+        }
+
+        @media (min-width: 640px) {
+            .lighthouse-vitals {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .lighthouse-vital {
+            font-size: 0.68rem;
+            color: rgba(255, 255, 255, 0.78);
+            text-align: center;
+            padding: 0.35rem 0.25rem;
+            border-radius: 0.4rem;
+            background: rgba(0, 0, 0, 0.18);
+        }
+
+        .lighthouse-vital strong {
+            display: block;
+            font-size: 0.72rem;
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 600;
+            margin-bottom: 0.1rem;
+        }
+
+        .method-panel {
+            margin-bottom: 1.25rem;
+            padding: 0.9rem;
+            border-radius: 0.75rem;
+            border: 1px solid rgba(var(--project-glow), 0.35);
+            background: rgba(var(--project-glow), 0.08);
+        }
+
+        .method-panel-lead {
+            font-size: 0.82rem;
+            color: rgba(243, 245, 250, 0.9);
+            line-height: 1.55;
+            margin: 0 0 0.85rem;
+        }
+
+        .method-block + .method-block {
+            margin-top: 0.85rem;
+            padding-top: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .method-block-title {
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(243, 229, 171, 0.88);
+            margin-bottom: 0.5rem;
+        }
+
+        .method-block-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .method-block-list li {
+            position: relative;
+            padding-left: 1rem;
+            margin-bottom: 0.4rem;
+            font-size: 0.78rem;
+            color: rgba(243, 245, 250, 0.86);
+            line-height: 1.5;
+        }
+
+        .method-block-list li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 0.7rem;
+        }
+
+        .web-filter-btn {
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 0.45rem 0.9rem;
+            border-radius: 9999px;
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            background: rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.82);
+            transition: border-color 0.3s ease, background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .web-filter-btn:hover,
+        .web-filter-btn.is-active {
+            border-color: rgba(212, 175, 55, 0.55);
+            background: rgba(212, 175, 55, 0.14);
+            color: var(--gold-light);
+            box-shadow: 0 0 18px rgba(212, 175, 55, 0.15);
+        }
+
+        .web-project.is-hidden {
+            display: none !important;
+        }
+
+        .project-link-badge--muted span {
+            color: rgba(243, 229, 171, 0.72);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .browser-mockup-parallax {
+                transform: none !important;
+            }
+
+            .browser-mockup:hover .browser-mockup-viewport img {
+                transform: none;
+            }
+        }
+
+        .perf-stack {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: stretch;
+        }
+
+        @media (min-width: 1024px) {
+            .perf-stack {
+                grid-template-columns: 1fr 1fr;
+                gap: 2.5rem;
+            }
+        }
+
+        .perf-stack-visual {
+            position: relative;
+        }
+
+        .perf-stack-badges {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            right: 1rem;
+            z-index: 5;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+            pointer-events: none;
+        }
+
+        .perf-stack-badge {
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.35rem 0.6rem;
+            border-radius: 9999px;
+            border: 1px solid rgba(12, 204, 107, 0.45);
+            background: rgba(8, 24, 18, 0.82);
+            color: #8dffb8;
+            backdrop-filter: blur(8px);
+        }
+
+        .perf-pillars {
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+        }
+
+        .perf-pillar {
+            width: 100%;
+            text-align: left;
+            padding: 0.85rem 1rem;
+            border-radius: 0.75rem;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            background: rgba(255, 255, 255, 0.03);
+            transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .perf-pillar:hover {
+            border-color: rgba(212, 175, 55, 0.35);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .perf-pillar.is-active {
+            border-color: rgba(212, 175, 55, 0.55);
+            background: rgba(212, 175, 55, 0.1);
+            box-shadow: 0 0 22px rgba(212, 175, 55, 0.12);
+        }
+
+        .perf-pillar-head {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+        }
+
+        .perf-pillar-icon {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 0.55rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(212, 175, 55, 0.14);
+            color: var(--gold);
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        .perf-pillar-title {
+            font-family: "Syne", sans-serif;
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .perf-pillar-kicker {
+            display: block;
+            font-size: 0.62rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(243, 229, 171, 0.7);
+            margin-top: 0.1rem;
+        }
+
+        .perf-detail {
+            margin-top: 1rem;
+            padding: 1rem 1.1rem;
+            border-radius: 0.85rem;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(0, 0, 0, 0.22);
+            min-height: 6rem;
+        }
+
+        .perf-panel {
+            display: none;
+            animation: perf-fade 0.35s ease;
+        }
+
+        .perf-panel.is-active {
+            display: block;
+        }
+
+        @keyframes perf-fade {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .perf-panel-title {
+            font-family: "Syne", sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.45rem;
+        }
+
+        .perf-panel-text {
+            font-size: 0.82rem;
+            color: rgba(243, 245, 250, 0.86);
+            line-height: 1.55;
+            margin-bottom: 0.75rem;
+        }
+
+        .perf-panel-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .perf-panel-list li {
+            position: relative;
+            padding-left: 1rem;
+            margin-bottom: 0.35rem;
+            font-size: 0.78rem;
+            color: rgba(243, 245, 250, 0.82);
+            line-height: 1.45;
+        }
+
+        .perf-panel-list li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 0.7rem;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .perf-panel {
+                animation: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-midnight text-body font-sans antialiased selection:bg-gold selection:text-midnight">
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    <div class="page-backdrop" aria-hidden="true">
+        <div class="page-backdrop-image"></div>
+        <div class="aurora-layer"></div>
+        <div class="page-backdrop-overlay"></div>
+        <div class="decor-orb decor-orb-animated w-80 h-80 bg-gold/22 top-8 -left-12"></div>
+        <div class="decor-orb decor-orb-animated-delay w-[28rem] h-[28rem] bg-sky-300/14 top-72 -right-20"></div>
+        <div class="decor-orb decor-orb-animated w-96 h-96 bg-amber-200/10 bottom-32 left-1/3"></div>
+        <div class="decor-orb w-64 h-64 bg-goldLight/8 top-1/2 right-1/4"></div>
+    </div>
+
+    <div id="cursor-dot" aria-hidden="true"></div>
+
+    <nav id="site-nav" class="site-nav" aria-label="Navigation principale">
+        <div class="nav-mobile">
+            <a href="#" class="nav-mobile-logo interactive">
+                Midnight <span>Studio</span>
+            </a>
+            <button
+                type="button"
+                id="nav-toggle"
+                class="nav-toggle interactive"
+                aria-expanded="false"
+                aria-controls="nav-drawer"
+                aria-label="Ouvrir le menu"
+            >
+                <span class="nav-toggle-box" aria-hidden="true">
+                    <span class="nav-toggle-line"></span>
+                    <span class="nav-toggle-line"></span>
+                    <span class="nav-toggle-line"></span>
+                </span>
+            </button>
+        </div>
+
+        <div class="nav-desktop">
+            <a href="#" class="shrink-0 text-sm heading-display font-semibold tracking-wide text-white magnetic interactive md:text-base">
+                Midnight <span class="heading-accent text-gold not-italic font-normal">Studio</span>
+            </a>
+            <div class="flex items-center gap-8 text-sm text-white/90">
+                <a href="#expertise" class="hover:text-goldLight transition magnetic interactive whitespace-nowrap">Expertise</a>
+                <a href="#projets" class="hover:text-goldLight transition magnetic interactive whitespace-nowrap">Projets</a>
+                <a href="#contact" class="hover:text-goldLight transition magnetic interactive whitespace-nowrap">Contact</a>
+            </div>
+            <div
+                class="nav-desktop-lang flex shrink-0 items-center gap-1.5 text-[11px] font-medium tracking-[0.12em] uppercase text-gray-400"
+                role="group"
+                aria-label="Langue"
+            >
+                <button type="button" class="lang-switch-btn interactive px-1 py-0.5 rounded transition text-gold" data-lang="fr" aria-pressed="true">FR</button>
+                <span class="text-gray-600 pointer-events-none select-none" aria-hidden="true">|</span>
+                <button type="button" class="lang-switch-btn interactive px-1 py-0.5 rounded transition text-gray-400 hover:text-gray-200" data-lang="en" aria-pressed="false">EN</button>
+                <span class="text-gray-600 pointer-events-none select-none" aria-hidden="true">|</span>
+                <button type="button" class="lang-switch-btn interactive px-1 py-0.5 rounded transition text-gray-400 hover:text-gray-200" data-lang="de" aria-pressed="false">DE</button>
+            </div>
+            <a href="#contact" class="magnetic interactive gold-glow shrink-0 whitespace-nowrap rounded-full btn-gold px-5 py-2 text-sm font-semibold text-midnight transition">
+                Parlons projet
+            </a>
+        </div>
+
+        <div id="nav-drawer" class="nav-drawer" aria-hidden="true" inert>
+            <p class="nav-drawer-label">Navigation</p>
+            <ul class="nav-drawer-links">
+                <li><a href="#expertise" class="nav-drawer-link interactive">Expertise</a></li>
+                <li><a href="#projets" class="nav-drawer-link interactive">Projets</a></li>
+                <li><a href="#contact" class="nav-drawer-link interactive">Contact</a></li>
+            </ul>
+            <div class="nav-drawer-footer">
+                <div class="nav-drawer-lang" role="group" aria-label="Langue">
+                    <button type="button" class="lang-switch-btn interactive transition text-gold" data-lang="fr" aria-pressed="true">FR</button>
+                    <button type="button" class="lang-switch-btn interactive transition text-gray-400" data-lang="en" aria-pressed="false">EN</button>
+                    <button type="button" class="lang-switch-btn interactive transition text-gray-400" data-lang="de" aria-pressed="false">DE</button>
+                </div>
+                <a href="#contact" class="nav-drawer-cta magnetic interactive gold-glow btn-gold text-midnight">
+                    Parlons projet
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+    <header id="hero" class="hero-stage relative z-0 flex min-h-screen items-center justify-center px-6 pb-16 pt-[5.5rem] md:pt-32">
+        <div class="hero-spotlight" id="hero-spotlight" aria-hidden="true"></div>
+        <div class="hero-inner mt-4 w-full max-w-5xl mx-auto text-center relative z-10" id="hero-inner">
+            <div class="hero-brand">
+                <div class="hero-logo-mark">
+                    <picture><source srcset="./midnight_logo.webp" type="image/webp"><img src="./midnight_logo.png" alt="Monogramme Midnight Studio" width="320" height="320" decoding="async" fetchpriority="high"></picture>
+                </div>
+            </div>
+
+            <h1 class="hero-headline hero-frame" tabindex="0">
+                <span class="hero-frame-ui" aria-hidden="true">
+                    <span class="hero-frame-label">Frame · Hero / Landing</span>
+                    <i class="hero-frame-handle hero-frame-handle--tl"></i>
+                    <i class="hero-frame-handle hero-frame-handle--tr"></i>
+                    <i class="hero-frame-handle hero-frame-handle--bl"></i>
+                    <i class="hero-frame-handle hero-frame-handle--br"></i>
+                </span>
+                <span class="hero-line-1" id="hero-line-1" data-i18n="hero_title_1">Design qui séduit.</span>
+                <span class="hero-line-2" data-i18n="hero_title_2">Technique qui performe.</span><span class="hero-cursor" aria-hidden="true"></span>
+            </h1>
+
+            <p class="hero-lead" data-i18n="hero_lead">UX, développement et SEO pour des marques qui visent l'excellence.</p>
+
+            <div class="hero-cta flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#projets" class="magnetic interactive gold-glow px-8 py-4 btn-gold text-midnight font-semibold rounded-lg tracking-wide transition">
+                    Découvrir mes projets
+                </a>
+                <a href="#contact" class="magnetic interactive px-8 py-4 border border-gold/60 text-goldLight font-semibold rounded-lg hover:bg-gold/15 hover:border-gold/80 transition tracking-wide glass">
+                    Me contacter
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="expertise" class="section-lazy py-24 px-6 relative z-10 section-veil section-contrast">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-[clamp(1.9rem,3vw,2.5rem)] mb-4">
+                    <span class="heading-display font-bold text-white">Mes Domaines</span>
+                    <span class="heading-accent text-goldLight"> d'Expertise</span>
+                </h2>
+                <div class="accent-line"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="fade-in-up glass p-8 rounded-2xl hover:border-gold/45 hover:shadow-warm transition duration-500 group shadow-soft">
+                    <i class="fas fa-pen-nib text-3xl text-gold mb-6 group-hover:scale-110 transition duration-300"></i>
+                    <h3 class="text-xl text-white heading-display font-semibold mb-4">Architecture & <span class="heading-accent text-champagne font-normal">UX/UI</span></h3>
+                    <p class="text-sm text-white/90 mb-6 font-normal leading-relaxed">
+                        Conception d'interfaces centrées utilisateur et création de chartes graphiques complètes pour asseoir la crédibilité de marque.
+                    </p>
+                    <ul class="text-xs text-muted space-y-2">
+                        <li><span class="text-gold mr-2">▹</span>Figma & Suite Adobe</li>
+                        <li><span class="text-gold mr-2">▹</span>Prototypage & User Flow</li>
+                        <li><span class="text-gold mr-2">▹</span>Identité visuelle</li>
+                    </ul>
+                </article>
+
+                <article class="fade-in-up glass p-8 rounded-2xl hover:border-gold/45 hover:shadow-warm transition duration-500 group shadow-soft [transition-delay:120ms]">
+                    <i class="fas fa-code text-3xl text-gold mb-6 group-hover:scale-110 transition duration-300"></i>
+                    <h3 class="text-xl text-white heading-display font-semibold mb-4">Développement <span class="heading-accent text-goldLight font-normal">Full-Stack</span></h3>
+                    <p class="text-sm text-white/90 mb-6 font-normal leading-relaxed">
+                        Développement d'applications web dynamiques, intégration pixel perfect responsive et gestion de bases de données.
+                    </p>
+                    <ul class="text-xs text-muted space-y-2">
+                        <li><span class="text-gold mr-2">▹</span>React.js / JavaScript ES6</li>
+                        <li><span class="text-gold mr-2">▹</span>PHP 8 & MySQL</li>
+                        <li><span class="text-gold mr-2">▹</span>WordPress & PrestaShop</li>
+                    </ul>
+                </article>
+
+                <article class="fade-in-up glass p-8 rounded-2xl hover:border-gold/45 hover:shadow-warm transition duration-500 group shadow-soft [transition-delay:240ms]">
+                    <i class="fas fa-chart-line text-3xl text-gold mb-6 group-hover:scale-110 transition duration-300"></i>
+                    <h3 class="text-xl text-white heading-display font-semibold mb-4">Performance & <span class="heading-accent text-champagne font-normal">Data</span></h3>
+                    <p class="text-sm text-white/90 mb-6 font-normal leading-relaxed">
+                        Audit technique, optimisation des temps de chargement et implémentation d'outils de tracking respectueux du RGPD.
+                    </p>
+                    <ul class="text-xs text-muted space-y-2">
+                        <li><span class="text-gold mr-2">▹</span>Google Lighthouse</li>
+                        <li><span class="text-gold mr-2">▹</span>Screaming Frog (SEO)</li>
+                        <li><span class="text-gold mr-2">▹</span>Matomo Analytics</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets" class="section-lazy py-24 px-6 relative z-10 section-veil section-contrast">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-[clamp(1.9rem,3vw,2.5rem)] mb-4">
+                    <span class="heading-display font-bold text-white">Projets de</span>
+                    <span class="heading-accent text-goldLight"> Référence</span>
+                </h2>
+                <div class="accent-line"></div>
+                <p class="text-muted mt-6 text-sm">Direction artistique d'abord, puis développement web — deux facettes d'une même exigence.</p>
+            </div>
+
+            <div id="design" class="mb-20 md:mb-28">
+                <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8 fade-in-up">
+                    <div>
+                        <span class="label-caps text-gold text-xs font-bold uppercase mb-3 block">Mission Stage</span>
+                        <h3 class="text-[clamp(1.6rem,2.5vw,2.15rem)] heading-display font-bold mb-3">
+                            <span class="text-white">Communication 360°</span>
+                            <span class="heading-accent text-goldLight font-normal"> &amp; Identité Visuelle</span>
+                        </h3>
+                        <p class="text-muted text-sm max-w-2xl leading-relaxed">
+                            Stage au sein de l'association <strong class="text-white font-medium">Santé en Commun</strong> (Mulhouse) : charte graphique style scrapbook, flyers, animation <a href="https://www.linkedin.com/company/sante-en-commun-mulhouse/" target="_blank" rel="noopener noreferrer" class="text-goldLight hover:text-gold underline underline-offset-2">LinkedIn</a> &amp; <a href="https://www.instagram.com/santeencommun68/" target="_blank" rel="noopener noreferrer" class="text-goldLight hover:text-gold underline underline-offset-2">Instagram</a>, et site <a href="https://santeencommun.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-goldLight hover:text-gold underline underline-offset-2">santeencommun.vercel.app</a>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-10 fade-in-up" aria-label="Périmètre de la mission">
+                    <div class="stage-scope-card glass rounded-xl px-3 py-4 text-center border border-white/10">
+                        <i class="fas fa-palette text-gold text-lg mb-2" aria-hidden="true"></i>
+                        <p class="text-[10px] sm:text-xs font-semibold tracking-wide uppercase text-white/90">Charte graphique</p>
+                    </div>
+                    <div class="stage-scope-card glass rounded-xl px-3 py-4 text-center border border-white/10">
+                        <i class="fas fa-file-image text-gold text-lg mb-2" aria-hidden="true"></i>
+                        <p class="text-[10px] sm:text-xs font-semibold tracking-wide uppercase text-white/90">Flyers</p>
+                    </div>
+                    <a href="https://www.linkedin.com/company/sante-en-commun-mulhouse/" target="_blank" rel="noopener noreferrer" class="stage-scope-card glass rounded-xl px-3 py-4 text-center border border-white/10 interactive magnetic block">
+                        <i class="fab fa-linkedin text-gold text-lg mb-2" aria-hidden="true"></i>
+                        <p class="text-[10px] sm:text-xs font-semibold tracking-wide uppercase text-white/90">LinkedIn</p>
+                    </a>
+                    <a href="https://www.instagram.com/santeencommun68/" target="_blank" rel="noopener noreferrer" class="stage-scope-card glass rounded-xl px-3 py-4 text-center border border-white/10 interactive magnetic block">
+                        <i class="fab fa-instagram text-gold text-lg mb-2" aria-hidden="true"></i>
+                        <p class="text-[10px] sm:text-xs font-semibold tracking-wide uppercase text-white/90">Instagram</p>
+                    </a>
+                    <a href="https://santeencommun.vercel.app/" target="_blank" rel="noopener noreferrer" class="stage-scope-card glass rounded-xl px-3 py-4 text-center border border-white/10 interactive magnetic block">
+                        <i class="fas fa-globe text-gold text-lg mb-2" aria-hidden="true"></i>
+                        <p class="text-[10px] sm:text-xs font-semibold tracking-wide uppercase text-white/90">Site web</p>
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch fade-in-up">
+                    <div class="lg:col-span-8 flex flex-col">
+                        <div
+                            class="design-carousel aspect-[4/3] md:aspect-[16/10] glass rounded-2xl relative overflow-hidden group hover:shadow-goldGlow transition duration-500 flex-1"
+                            data-carousel
+                            aria-roledescription="carousel"
+                            aria-label="Galerie mission stage — Santé en Commun"
+                        >
+                            <div class="carousel-track h-full">
+                                <figure
+                                    class="carousel-slide is-active h-full"
+                                    data-label="Charte graphique"
+                                    data-category="Santé en Commun · Identité"
+                                    data-desc="Création de la charte graphique officielle de l'association : palette terracotta, jaune moutarde et vert sauge, typographies Sprite Graffiti & Poppins, univers visuel « scrapbook » déclinable sur tous les supports."
+                                    data-tags="Charte graphique,Scrapbook,Mulhouse"
+                                >
+                                    <picture><source srcset="./santeencommun/chartegraphique.webp" type="image/webp"><img src="./santeencommun/chartegraphique.png" alt="Charte graphique Santé en Commun — Mulhouse" class="w-full h-full object-contain bg-midnight/50 p-5 md:p-8" loading="lazy" decoding="async"></picture>
+                                </figure>
+                                <figure
+                                    class="carousel-slide h-full"
+                                    data-label="Flyer — Appel à bénévoles"
+                                    data-category="Santé en Commun · Print"
+                                    data-desc="Conception du flyer d'appel à bénévoles pour les permanences santé communautaire dans les quartiers de Mulhouse : mise en page éditoriale, accroche engagée et déclinaison fidèle à la charte scrapbook."
+                                    data-tags="Flyer,Print,Bénévolat"
+                                >
+                                    <picture><source srcset="./santeencommun/flyer.webp" type="image/webp"><img src="./santeencommun/flyer.png" alt="Flyer appel à bénévoles — Santé en Commun" class="w-full h-full object-contain bg-midnight/50 p-5 md:p-8" loading="lazy" decoding="async"></picture>
+                                </figure>
+                                <figure
+                                    class="carousel-slide h-full"
+                                    data-label="Réseaux sociaux"
+                                    data-category="Santé en Commun · Social media"
+                                    data-desc="Animation des comptes LinkedIn et Instagram de l'association : visuels de posts, permanences santé, sensibilisation et engagement autour de la santé communautaire à Mulhouse."
+                                    data-tags="LinkedIn,Instagram,Content"
+                                >
+                                    <picture><source srcset="./santeencommun/post.webp" type="image/webp"><img src="./santeencommun/post.png" alt="Visuel réseaux sociaux — Santé en Commun" class="w-full h-full object-contain bg-midnight/50 p-4 md:p-6" loading="lazy" decoding="async"></picture>
+                                </figure>
+                                <figure
+                                    class="carousel-slide h-full"
+                                    data-label="Site web"
+                                    data-category="Santé en Commun · Web"
+                                    data-desc="Maquette et développement du site institutionnel santeencommun.vercel.app : mission de l'asso, équipe, agenda des Cafés Santé et formulaire bénévoles — cohérent avec l'identité visuelle scrapbook."
+                                    data-tags="Site web,Responsive,ESS"
+                                >
+                                    <picture><source srcset="./santeencommun/site.webp" type="image/webp"><img src="./santeencommun/site.png" alt="Site web Santé en Commun" class="w-full h-full object-cover" loading="lazy" decoding="async"></picture>
+                                </figure>
+                            </div>
+
+                            <span class="carousel-counter absolute top-4 right-4 z-20 glass text-[11px] font-semibold tracking-widest text-gold px-3 py-1.5 rounded-full border border-white/10">01 / 04</span>
+
+                            <div class="absolute inset-x-0 bottom-0 z-20 flex items-center justify-between gap-3 px-4 pb-4 pt-16 bg-gradient-to-t from-midnight/90 via-midnight/40 to-transparent">
+                                <button type="button" class="carousel-prev interactive magnetic w-10 h-10 rounded-full glass border border-white/20 text-gold flex items-center justify-center hover:border-gold/50 transition" aria-label="Réalisation précédente">
+                                    <i class="fas fa-chevron-left text-xs" aria-hidden="true"></i>
+                                </button>
+                                <div class="carousel-dots flex items-center gap-2" role="tablist" aria-label="Choisir une réalisation"></div>
+                                <button type="button" class="carousel-next interactive magnetic w-10 h-10 rounded-full glass border border-white/20 text-gold flex items-center justify-center hover:border-gold/50 transition" aria-label="Réalisation suivante">
+                                    <i class="fas fa-chevron-right text-xs" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="carousel-thumbs flex gap-3 mt-4 overflow-x-auto pb-1" role="tablist" aria-label="Miniatures des réalisations"></div>
+                    </div>
+
+                    <div class="lg:col-span-4">
+                        <div class="glass rounded-2xl p-8 md:p-10 h-full flex flex-col justify-between border border-white/22 hover:border-gold/40 transition duration-500">
+                            <div class="mb-6 pb-6 border-b border-white/18">
+                                <span class="inline-flex items-center gap-2 text-[10px] font-bold tracking-[0.22em] uppercase text-gold/90 mb-3">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" aria-hidden="true"></span>
+                                    Périmètre stage
+                                </span>
+                                <p class="text-muted text-sm leading-relaxed">
+                                    Association mulhousienne de <strong class="text-white/95 font-medium">santé communautaire</strong> — Cafés Santé, permanences pluridisciplinaires et prévention dans les quartiers.
+                                </p>
+                            </div>
+                            <div>
+                                <span class="carousel-category text-[10px] font-bold tracking-[0.22em] uppercase text-gold/90 block mb-2">Santé en Commun · Identité</span>
+                                <h4 class="carousel-title text-2xl text-white heading-display font-bold mb-4">Charte graphique</h4>
+                                <p class="carousel-desc text-muted text-sm leading-relaxed mb-6">Création de la charte graphique officielle de l'association : palette terracotta, jaune moutarde et vert sauge, typographies Sprite Graffiti &amp; Poppins, univers visuel « scrapbook » déclinable sur tous les supports.</p>
+                                <div class="carousel-tags flex flex-wrap gap-2 text-xs mb-6">
+                                    <span class="px-3 py-1 border rounded-full tag-pill">Charte graphique</span>
+                                    <span class="px-3 py-1 border rounded-full tag-pill">Scrapbook</span>
+                                    <span class="px-3 py-1 border rounded-full tag-pill">Mulhouse</span>
+                                </div>
+                                <div class="flex flex-wrap gap-2 pt-5 border-t border-white/18">
+                                    <a href="https://santeencommun.vercel.app/" target="_blank" rel="noopener noreferrer" class="interactive magnetic inline-flex items-center gap-2 px-3 py-2 rounded-lg glass border border-white/22 text-xs text-goldLight hover:border-gold/50 transition">
+                                        <i class="fas fa-globe" aria-hidden="true"></i> Site
+                                    </a>
+                                    <a href="https://www.linkedin.com/company/sante-en-commun-mulhouse/" target="_blank" rel="noopener noreferrer" class="interactive magnetic inline-flex items-center gap-2 px-3 py-2 rounded-lg glass border border-white/22 text-xs text-goldLight hover:border-gold/50 transition">
+                                        <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+                                    </a>
+                                    <a href="https://www.instagram.com/santeencommun68/" target="_blank" rel="noopener noreferrer" class="interactive magnetic inline-flex items-center gap-2 px-3 py-2 rounded-lg glass border border-white/22 text-xs text-goldLight hover:border-gold/50 transition">
+                                        <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="cartes-de-visite" class="mb-20 md:mb-28 fade-in-up scroll-mt-36">
+                <div class="text-center mb-12">
+                    <span class="label-caps text-gold text-xs font-bold uppercase mb-3 block">Print premium</span>
+                    <h3 class="text-[clamp(1.5rem,2.2vw,2rem)] heading-display font-bold mb-3">
+                        <span class="text-white">Cartes de</span>
+                        <span class="heading-accent text-goldLight"> visite</span>
+                    </h3>
+                    <div class="accent-line mb-4"></div>
+                    <p class="text-muted text-sm max-w-xl mx-auto">Survolez pour retourner la carte.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-12 lg:gap-16 max-w-3xl mx-auto px-4">
+                    <article class="text-center">
+                        <h4 class="heading-display text-white font-semibold text-lg mb-1">Na&amp;Thérapeute</h4>
+                        <p class="text-muted text-xs mb-5">Thérapeute pour femmes — Belfort</p>
+                        <div class="business-card-scene interactive" tabindex="0" role="button" aria-label="Carte de visite Na&amp;Thérapeute — survoler pour retourner">
+                            <div class="business-card-flip">
+                                <div class="business-card-face front">
+                                    <picture><source srcset="./carte/cartedevisite.webp" type="image/webp"><img src="./carte/cartedevisite.png" alt="Carte de visite Na&amp;Thérapeute — recto" loading="lazy" decoding="async"></picture>
+                                </div>
+                                <div class="business-card-face back">
+                                    <picture><source srcset="./carte/cartedevisite2.webp" type="image/webp"><img src="./carte/cartedevisite2.png" alt="Carte de visite Na&amp;Thérapeute — verso" loading="lazy" decoding="async"></picture>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-[10px] tracking-[0.2em] uppercase text-gold/80 mt-4">Recto · Verso</p>
+                    </article>
+
+                    <article class="text-center">
+                        <h4 class="heading-display text-white font-semibold text-lg mb-1">Sakup</h4>
+                        <p class="text-muted text-xs mb-5">Boutique e-commerce — identité print</p>
+                        <div class="business-card-scene business-card-scene--landscape interactive" tabindex="0" role="button" aria-label="Carte de visite Sakup — survoler pour retourner">
+                            <div class="business-card-flip">
+                                <div class="business-card-face front">
+                                    <picture><source srcset="./carte/sakup.webp" type="image/webp"><img src="./carte/sakup.png" alt="Carte de visite Sakup — recto" loading="lazy" decoding="async"></picture>
+                                </div>
+                                <div class="business-card-face back">
+                                    <picture><source srcset="./carte/sakup2.webp" type="image/webp"><img src="./carte/sakup2.png" alt="Carte de visite Sakup — verso" loading="lazy" decoding="async"></picture>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-[10px] tracking-[0.2em] uppercase text-gold/80 mt-4">Recto · Verso</p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4 md:gap-6 mb-14 fade-in-up" aria-hidden="true">
+                <div class="h-px flex-1 bg-gradient-to-r from-transparent via-gold/35 to-transparent"></div>
+                <span class="text-gold text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase shrink-0">Développement Web</span>
+                <div class="h-px flex-1 bg-gradient-to-l from-transparent via-gold/35 to-transparent"></div>
+            </div>
+
+            <div id="web-projets" class="text-center mb-10 fade-in-up">
+                <h3 class="text-[clamp(1.5rem,2.2vw,1.9rem)] heading-display font-bold mb-3">
+                    <span class="text-white">Travaux</span>
+                    <span class="heading-accent text-goldLight"> Web</span>
+                </h3>
+                <p class="text-muted text-sm max-w-2xl mx-auto mb-8">Sites, e-commerce et apps — design, performance et SEO.</p>
+                <div id="web-project-filters" class="flex flex-wrap justify-center gap-2 md:gap-3" role="tablist" aria-label="Filtrer les projets web">
+                    <button type="button" class="web-filter-btn interactive magnetic is-active" data-web-filter="all" aria-pressed="true">Tous</button>
+                    <button type="button" class="web-filter-btn interactive magnetic" data-web-filter="ecommerce" aria-pressed="false">E-commerce</button>
+                    <button type="button" class="web-filter-btn interactive magnetic" data-web-filter="ux" aria-pressed="false">UX / UI</button>
+                    <button type="button" class="web-filter-btn interactive magnetic" data-web-filter="ess" aria-pressed="false">ESS</button>
+                    <button type="button" class="web-filter-btn interactive magnetic" data-web-filter="data" aria-pressed="false">Data</button>
+                    <button type="button" class="web-filter-btn interactive magnetic" data-web-filter="branding" aria-pressed="false">Branding</button>
+                    <button type="button" class="web-filter-btn interactive magnetic" data-web-filter="fullstack" aria-pressed="false">Full-Stack</button>
+                </div>
+            </div>
+
+            <div class="web-projects-shell">
+                <div class="web-projects-list space-y-0">
+
+                <article id="projet-sante-en-commun" class="web-project fade-in-up flex flex-col lg:flex-row gap-10 lg:gap-16 lg:items-start" data-web-categories="ess" data-glow="terracotta">
+                    <div class="web-project-media w-full lg:w-1/2">
+                        <div class="browser-mockup">
+                            <div class="browser-mockup-chrome" aria-hidden="true">
+                                <span class="browser-mockup-dot"></span>
+                                <span class="browser-mockup-dot"></span>
+                                <span class="browser-mockup-dot"></span>
+                                <div class="browser-mockup-url">santeencommun.vercel.app</div>
+                            </div>
+                            <div class="browser-mockup-viewport group">
+                                <a href="https://santeencommun.vercel.app/" target="_blank" rel="noopener noreferrer" class="block h-full">
+                                    <div class="browser-mockup-parallax h-full" data-parallax-wrap>
+                                        <picture><source srcset="./santeencommun/site.webp" type="image/webp"><img src="./santeencommun/site.png" alt="Site web Santé en Commun — Mulhouse" class="w-full h-full object-cover" loading="lazy" decoding="async" data-parallax-img></picture>
+                                    </div>
+                                    <div class="project-link-badge" aria-hidden="true">
+                                        <span>Voir le site <i class="fas fa-arrow-up-right-from-square text-xs"></i></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="web-project-body w-full lg:w-1/2">
+                        <span class="web-project-label project-label text-xs uppercase mb-2 block">Stage — Santé en Commun</span>
+                        <h3 class="text-2xl text-white heading-display font-bold mb-3">Site Web <span class="heading-accent text-champagne font-normal">Association ESS</span></h3>
+                        <div class="lighthouse-panel lighthouse-panel--compact" aria-label="Audit Google Lighthouse — Bureau">
+                            <div class="lighthouse-panel-header">
+                                <span class="lighthouse-panel-title">Lighthouse · Bureau</span>
+                                <span class="lighthouse-panel-url">santeencommun.vercel.app</span>
+                            </div>
+                            <div class="lighthouse-scores">
+                                <div class="lighthouse-score">
+                                    <span class="lighthouse-score-value">98</span>
+                                    <span class="lighthouse-score-label">Perf.</span>
+                                </div>
+                                <div class="lighthouse-score">
+                                    <span class="lighthouse-score-value">96</span>
+                                    <span class="lighthouse-score-label">A11y</span>
+                                </div>
+                                <div class="lighthouse-score">
+                                    <span class="lighthouse-score-value">96</span>
+                                    <span class="lighthouse-score-label">Pratiques</span>
+                                </div>
+                                <div class="lighthouse-score">
+                                    <span class="lighthouse-score-value is-perfect">100</span>
+                                    <span class="lighthouse-score-label">SEO</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-muted text-sm mb-4 leading-relaxed">Site institutionnel Mulhouse — charte scrapbook, agenda Cafés Santé et formulaire bénévoles.</p>
+                        <div class="flex flex-wrap gap-3 text-xs mb-4">
+                            <span class="px-3 py-1 border rounded-full tag-pill">HTML/CSS/JS</span>
+                            <span class="px-3 py-1 border rounded-full tag-pill">Lighthouse</span>
+                            <span class="px-3 py-1 border rounded-full tag-pill">ESS</span>
+                        </div>
+                        <div class="web-project-actions">
+                            <a href="https://www.linkedin.com/company/sante-en-commun-mulhouse/" target="_blank" rel="noopener noreferrer" class="interactive magnetic inline-flex items-center gap-2 text-sm text-muted hover:text-goldLight transition">
+                                LinkedIn <i class="fab fa-linkedin text-xs" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.instagram.com/santeencommun68/" target="_blank" rel="noopener noreferrer" class="interactive magnetic inline-flex items-center gap-2 text-sm text-muted hover:text-goldLight transition">
+                                Instagram <i class="fab fa-instagram text-xs" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="projet-therapeute" class="web-project fade-in-up flex flex-col lg:flex-row gap-10 lg:gap-16 lg:items-start" data-web-categories="branding ux" data-glow="lavender">
+                    <div class="web-project-media w-full lg:w-1/2">
+                        <div class="browser-mockup">
+                            <div class="browser-mockup-chrome" aria-hidden="true">
+                                <span class="browser-mockup-dot"></span>
+                                <span class="browser-mockup-dot"></span>
+                                <span class="browser-mockup-dot"></span>
+                                <div class="browser-mockup-url">naettherapeute.com</div>
+                            </div>
+                            <div class="browser-mockup-viewport group">
+                                <a href="https://naettherapeute.com/" target="_blank" rel="noopener noreferrer" class="block h-full">
+                                    <div class="browser-mockup-parallax h-full" data-parallax-wrap>
+                                        <picture><source srcset="./therapeute.webp" type="image/webp"><img src="./therapeute.png" alt="Site web Cabinet Na&amp;Thérapeute — Belfort" class="w-full h-full object-cover" loading="lazy" decoding="async" data-parallax-img></picture>
+                                    </div>
+                                    <div class="project-link-badge" aria-hidden="true">
+                                        <span>Voir le site <i class="fas fa-arrow-up-right-from-square text-xs"></i></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="web-project-body w-full lg:w-1/2">
+                        <span class="web-project-label project-label text-xs uppercase mb-2 block">Branding &amp; SEO local</span>
+                        <h3 class="text-2xl text-white heading-display font-bold mb-3">Cabinet <span class="heading-accent text-champagne font-normal">Na&amp;Thérapeute</span></h3>
+                        <div class="lighthouse-panel lighthouse-panel--compact" aria-label="Audit Google Lighthouse — Bureau">
+                            <div class="lighthouse-panel-header">
+                                <span class="lighthouse-panel-title">Lighthouse · Bureau</span>
+                                <span class="lighthouse-panel-url">naettherapeute.com</span>
+                            </div>
+                            <div class="lighthouse-scores">
+                                <div class="lighthouse-score">
+                                    <span class="lighthouse-score-value">93</span>
+                                    <span class="lighthouse-score-label">Perf.</span>
+                                </div>
+                                <div class="lighthouse-score">
+                                    <span class="lighthouse-score-value">95</span>
+                                    <span class="lighthouse-score-label">A11y</span>
+                                </div>
+                                <div class="lighthouse-score">
+                                    <span class="lighthouse-score-value is-perfect">100</span>
+                                    <span class="lighthouse-score-label">Pratiques</span>
+                                </div>
+                                <div class="lighthouse-score">
+                                    <span class="lighthouse-score-value is-perfect">100</span>
+                                    <span class="lighthouse-score-label">SEO</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-muted text-sm mb-4 leading-relaxed">Branding 360° pour Nadia (Belfort) — logo, <a href="#cartes-de-visite" class="text-goldLight hover:text-gold underline underline-offset-2">carte de visite</a> et site <a href="https://naettherapeute.com/" target="_blank" rel="noopener noreferrer" class="text-goldLight hover:text-gold underline underline-offset-2">naettherapeute.com</a>.</p>
+                        <div class="flex flex-wrap gap-3 text-xs">
+                            <span class="px-3 py-1 border rounded-full tag-pill">Branding</span>
+                            <span class="px-3 py-1 border rounded-full tag-pill">Lighthouse</span>
+                            <span class="px-3 py-1 border rounded-full tag-pill">SEO Local</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="web-project fade-in-up flex flex-col lg:flex-row gap-10 lg:gap-16 lg:items-start" data-web-categories="ecommerce" data-glow="rose">
+                    <div class="web-project-media w-full lg:w-1/2">
+                        <div class="browser-mockup">
+                            <div class="browser-mockup-chrome" aria-hidden="true">
+                                <span class="browser-mockup-dot"></span>
+                                <span class="browser-mockup-dot"></span>
+                                <span class="browser-mockup-dot"></span>
+                                <div class="browser-mockup-url">sakup — boutique PrestaShop</div>
+                            </div>
+                            <div class="browser-mockup-viewport group">
+                                <a href="https://ip87-106-123-50.pbiaas.com/Sakup/" target="_blank" rel="noopener noreferrer" class="block h-full">
+                                    <div class="browser-mockup-parallax h-full" data-parallax-wrap>
+                                        <picture><source srcset="./prestashop.webp" type="image/webp"><img src="./prestashop.png" alt="Mockup Boutique PrestaShop Sakup" class="w-full h-full object-cover" loading="lazy" decoding="async" data-parallax-img></picture>
+                                    </div>
+                                    <div class="project-link-badge" aria-hidden="true">
+                                        <span>Voir le site <i class="fas fa-arrow-up-right-from-square text-xs"></i></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="web-project-body w-full lg:w-1/2">
+                        <span class="web-project-label project-label text-xs uppercase mb-2 block">Audit &amp; Architecture</span>
+                        <h3 class="text-2xl text-white heading-display font-bold mb-3">Boutique PrestaShop <span class="heading-accent text-champagne font-normal">Sakup</span></h3>
+                        <div class="web-project-compare" aria-label="Avant / Après optimisation">
+                            <div class="web-project-compare-card">
+                                <span class="web-project-compare-label">Avant</span>
+                                <p>LCP 4,1 s · Perf. 58</p>
+                            </div>
+                            <div class="web-project-compare-card is-after">
+                                <span class="web-project-compare-label">Après</span>
+                                <p>LCP 1,7 s · Perf. 96</p>
+                            </div>
+                        </div>
+                        <p class="text-muted text-sm mb-4 leading-relaxed">E-commerce optimisé — audit SEO, Core Web Vitals et <a href="#cartes-de-visite" class="text-goldLight hover:text-gold underline underline-offset-2">identité print</a>.</p>
+                        <div class="flex flex-wrap gap-3 text-xs">
+                            <span class="px-3 py-1 border rounded-full tag-pill">PrestaShop</span>
+                            <span class="px-3 py-1 border rounded-full tag-pill">Lighthouse</span>
+                            <span class="px-3 py-1 border rounded-full tag-pill">SEO</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="web-project fade-in-up flex flex-col lg:flex-row gap-10 lg:gap-16 lg:items-start" data-web-categories="ux ecommerce" data-glow="coral">
+                    <div class="web-project-media w-full lg:w-1/2">
+                        <div class="browser-mockup">
+                            <div class="browser-mockup-chrome" aria-hidden="true">
+                                <span class="browser-mockup-dot"></span>
+                                <span class="browser-mockup-dot"></span>
+                                <span class="browser-mockup-dot"></span>
+                                <div class="browser-mockup-url">figma.com — E-Commerce Immersif</div>
+                            </div>
+                            <div class="browser-mockup-viewport group">
+                                <a href="https://www.figma.com/design/iYKpok2xjiZkq5P7EW4Z9t/Untitled--Copy---Copy-?node-id=0-1&t=Sz1eJphQnLNOKCre-1" target="_blank" rel="noopener noreferrer" class="block h-full">
+                                    <div class="browser-mockup-parallax h-full" data-parallax-wrap>
+                                        <picture><source srcset="./sushi.webp" type="image/webp"><img src="./sushi.png" alt="Mockup E-Commerce Immersif Sushis" class="w-full h-full object-cover" loading="lazy" decoding="async" data-parallax-img></picture>
+                                    </div>
+                                    <div class="project-link-badge" aria-hidden="true">
+                                        <span>Voir sur Figma <i class="fas fa-arrow-up-right-from-square text-xs"></i></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="web-project-body w-full lg:w-1/2">
+                        <span class="web-project-label project-label text-xs uppercase mb-2 block">UX / UI Design</span>
+                        <h3 class="text-2xl text-white heading-display font-bold mb-3">E-Commerce Immersif</h3>
+                        <p class="text-muted text-sm mb-4 leading-relaxed">DA immersive et tunnel d'achat Figma — moins de friction, plus de conversion.</p>
+                        <div class="flex flex-wrap gap-3 text-xs">
+                            <span class="px-3 py-1 border rounded-full tag-pill">Figma</span>
+                            <span class="px-3 py-1 border rounded-full tag-pill">User Flow</span>
+                            <span class="px-3 py-1 border rounded-full tag-pill">Prototypage</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="web-project fade-in-up flex flex-col lg:flex-row gap-10 lg:gap-16 lg:items-start" data-web-categories="branding" data-glow="sky">
+                    <div class="web-project-media w-full lg:w-1/2">
+                        <div class="browser-mockup">
+                            <div class="browser-mockup-chrome" aria-hidden="true">
+                                <span class="browser-mockup-dot"></span>
+                                <span class="browser-mockup-dot"></span>
+                                <span class="browser-mockup-dot"></span>
+                                <div class="browser-mockup-url">agence-amya.fr</div>
+                            </div>
+                            <div class="browser-mockup-viewport group">
+                                <div class="browser-mockup-parallax h-full" data-parallax-wrap>
+                                    <picture><source srcset="./amya.webp" type="image/webp"><img src="./amya.png" alt="Mockup Agence AMYA" class="w-full h-full object-cover" loading="lazy" decoding="async" data-parallax-img></picture>
+                                </div>
+                                <div class="project-link-badge project-link-badge--muted" aria-hidden="true">
+                                    <span>Projet confidentiel <i class="fas fa-lock text-xs"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="web-project-body w-full lg:w-1/2">
+                        <span class="web-project-label project-label text-xs uppercase mb-2 block">Identité &amp; Intégration</span>
+                        <h3 class="text-2xl text-white heading-display font-bold mb-3">Agence AMYA</h3>
+                        <p class="text-muted text-sm mb-4 leading-relaxed">Identité visuelle et intégration WordPress pixel perfect.</p>
+                        <div class="flex flex-wrap gap-3 text-xs">
+                            <span class="px-3 py-1 border rounded-full tag-pill">Figma</span>
+                            <span class="px-3 py-1 border rounded-full tag-pill">WordPress</span>
+                            <span class="px-3 py-1 border rounded-full tag-pill">HTML/CSS</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="web-project fade-in-up flex flex-col lg:flex-row gap-10 lg:gap-16 lg:items-start" data-web-categories="fullstack" data-glow="violet">
+                    <div class="web-project-media w-full lg:w-1/2">
+                        <div class="browser-mockup">
+                            <div class="browser-mockup-chrome" aria-hidden="true">
+                                <span class="browser-mockup-dot"></span>
+                                <span class="browser-mockup-dot"></span>
+                                <span class="browser-mockup-dot"></span>
+                                <div class="browser-mockup-url">plateforme-edtech.app</div>
+                            </div>
+                            <div class="browser-mockup-viewport group">
+                                <div class="browser-mockup-parallax h-full" data-parallax-wrap>
+                                    <picture><source srcset="./react.webp" type="image/webp"><img src="./react.png" alt="Mockup Plateforme SaaS EdTech React" class="w-full h-full object-cover" loading="lazy" decoding="async" data-parallax-img></picture>
+                                </div>
+                                <div class="project-link-badge project-link-badge--muted" aria-hidden="true">
+                                    <span>Projet confidentiel <i class="fas fa-lock text-xs"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="web-project-body w-full lg:w-1/2">
+                        <span class="web-project-label project-label text-xs uppercase mb-2 block">Web App Full-Stack</span>
+                        <h3 class="text-2xl text-white heading-display font-bold mb-3">Plateforme SaaS EdTech</h3>
+                        <p class="text-muted text-sm mb-4 leading-relaxed">App React avec espaces membres, suivi de progression et abonnement.</p>
+                        <div class="flex flex-wrap gap-3 text-xs">
+                            <span class="px-3 py-1 border rounded-full tag-pill">React.js</span>
+                            <span class="px-3 py-1 border rounded-full tag-pill">Auth</span>
+                            <span class="px-3 py-1 border rounded-full tag-pill">BDD</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="web-project fade-in-up flex flex-col lg:flex-row gap-10 lg:gap-16 lg:items-start" data-web-categories="data" data-glow="mint">
+                    <div class="web-project-media w-full lg:w-1/2">
+                        <div class="browser-mockup">
+                            <div class="browser-mockup-chrome" aria-hidden="true">
+                                <span class="browser-mockup-dot"></span>
+                                <span class="browser-mockup-dot"></span>
+                                <span class="browser-mockup-dot"></span>
+                                <div class="browser-mockup-url">matomo analytics — dashboard</div>
+                            </div>
+                            <div class="browser-mockup-viewport group">
+                                <div class="browser-mockup-parallax h-full" data-parallax-wrap>
+                                    <picture><source srcset="./matomo.webp" type="image/webp"><img src="./matomo.png" alt="Mockup Web Analyse Matomo" class="w-full h-full object-cover" loading="lazy" decoding="async" data-parallax-img></picture>
+                                </div>
+                                <div class="project-link-badge project-link-badge--muted" aria-hidden="true">
+                                    <span>Projet confidentiel <i class="fas fa-lock text-xs"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="web-project-body w-full lg:w-1/2">
+                        <span class="web-project-label project-label text-xs uppercase mb-2 block">Data &amp; Lead Gen</span>
+                        <h3 class="text-2xl text-white heading-display font-bold mb-3">Web Analyse <span class="heading-accent text-champagne font-normal">avec Matomo</span></h3>
+                        <div class="method-panel" aria-label="Méthode analytics Matomo">
+                            <p class="method-panel-lead">Mesure du trafic, des conversions et des entonnoirs — surtout sur l'e-commerce et les projets clients qui en ont besoin.</p>
+                            <ul class="method-block-list">
+                                <li>Trafic, événements CTA, formulaires et tunnels de vente</li>
+                                <li>Données hébergées en UE, conformes RGPD — vous gardez la main</li>
+                                <li>Alternative à Google Analytics : pas de revente pub ni de profilage tiers</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-3 text-xs">
+                            <span class="px-3 py-1 border rounded-full tag-pill">Matomo</span>
+                            <span class="px-3 py-1 border rounded-full tag-pill">RGPD</span>
+                            <span class="px-3 py-1 border rounded-full tag-pill">Conversion</span>
+                        </div>
+                    </div>
+                </article>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="anatomie" class="section-lazy relative z-10 scroll-mt-36 py-20 px-6 section-contrast">
+        <div class="absolute inset-0 -z-10 bg-gradient-to-b from-midnight/35 via-midnight/85 to-midnight pointer-events-none" aria-hidden="true"></div>
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-10 fade-in-up">
+                <h2 class="heading-display text-white font-bold tracking-tight text-[clamp(1.95rem,3.8vw,2.95rem)]">
+                    Sous le capot d'un site <span class="heading-accent text-goldLight font-normal">qui performe</span>
+                </h2>
+                <div class="accent-line mt-4 mb-4"></div>
+                <p class="text-muted text-sm max-w-2xl mx-auto leading-relaxed">
+                    4 piliers — exemples sur <a href="#projet-sante-en-commun" class="text-goldLight hover:text-gold underline underline-offset-2">Santé en Commun</a> et <a href="#projet-therapeute" class="text-goldLight hover:text-gold underline underline-offset-2">Na&amp;Thérapeute</a>.
+                </p>
+            </div>
+
+            <div class="perf-stack fade-in-up" id="perf-explorer">
+                <div class="perf-stack-visual">
+                    <div class="browser-mockup">
+                        <div class="browser-mockup-chrome" aria-hidden="true">
+                            <span class="browser-mockup-dot"></span>
+                            <span class="browser-mockup-dot"></span>
+                            <span class="browser-mockup-dot"></span>
+                            <div class="browser-mockup-url">santeencommun.vercel.app — exemple réel</div>
+                        </div>
+                        <div class="browser-mockup-viewport">
+                            <picture><source srcset="./santeencommun/site.webp" type="image/webp"><img src="./santeencommun/site.png" alt="Site Santé en Commun — exemple de site performant" class="w-full h-full object-cover" loading="lazy" decoding="async"></picture>
+                            <div class="perf-stack-badges" aria-hidden="true">
+                                <span class="perf-stack-badge">Perf. 98</span>
+                                <span class="perf-stack-badge">SEO 100</span>
+                                <span class="perf-stack-badge">LCP 0,9 s</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="perf-pillars" role="tablist" aria-label="Les 4 piliers d'un site performant">
+                        <button type="button" class="perf-pillar interactive is-active" role="tab" aria-selected="true" data-perf-tab="design">
+                            <span class="perf-pillar-head">
+                                <span class="perf-pillar-icon" aria-hidden="true"><i class="fas fa-palette"></i></span>
+                                <span>
+                                    <span class="perf-pillar-title">Design &amp; confiance</span>
+                                    <span class="perf-pillar-kicker">Couche visible</span>
+                                </span>
+                            </span>
+                        </button>
+                        <button type="button" class="perf-pillar interactive" role="tab" aria-selected="false" data-perf-tab="seo">
+                            <span class="perf-pillar-head">
+                                <span class="perf-pillar-icon" aria-hidden="true"><i class="fas fa-sitemap"></i></span>
+                                <span>
+                                    <span class="perf-pillar-title">Structure SEO</span>
+                                    <span class="perf-pillar-kicker">Couche sémantique</span>
+                                </span>
+                            </span>
+                        </button>
+                        <button type="button" class="perf-pillar interactive" role="tab" aria-selected="false" data-perf-tab="speed">
+                            <span class="perf-pillar-head">
+                                <span class="perf-pillar-icon" aria-hidden="true"><i class="fas fa-gauge-high"></i></span>
+                                <span>
+                                    <span class="perf-pillar-title">Vitesse &amp; accessibilité</span>
+                                    <span class="perf-pillar-kicker">Couche technique</span>
+                                </span>
+                            </span>
+                        </button>
+                        <button type="button" class="perf-pillar interactive" role="tab" aria-selected="false" data-perf-tab="data">
+                            <span class="perf-pillar-head">
+                                <span class="perf-pillar-icon" aria-hidden="true"><i class="fas fa-chart-line"></i></span>
+                                <span>
+                                    <span class="perf-pillar-title">Mesure &amp; conversion</span>
+                                    <span class="perf-pillar-kicker">Couche data</span>
+                                </span>
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="perf-detail" role="tabpanel">
+                        <div class="perf-panel is-active" id="perf-panel-design" data-perf-panel="design">
+                            <p class="perf-panel-title">Design &amp; confiance</p>
+                            <p class="perf-panel-text">Charte cohérente et parcours clair — l'utilisateur sait où il va.</p>
+                        </div>
+                        <div class="perf-panel" id="perf-panel-seo" data-perf-panel="seo">
+                            <p class="perf-panel-title">Structure SEO</p>
+                            <p class="perf-panel-text">Balisage sémantique et SEO local — 100/100 sur les deux projets cités.</p>
+                        </div>
+                        <div class="perf-panel" id="perf-panel-speed" data-perf-panel="speed">
+                            <p class="perf-panel-title">Vitesse</p>
+                            <p class="perf-panel-text">Lighthouse 98 et 93 — sites rapides qui ne font pas fuir les visiteurs.</p>
+                        </div>
+                        <div class="perf-panel" id="perf-panel-data" data-perf-panel="data">
+                            <p class="perf-panel-title">Mesure (option)</p>
+                            <p class="perf-panel-text">Matomo sur l'e-commerce quand c'est pertinent — pas sur tous les sites vitrine.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-lazy relative z-10 scroll-mt-36 py-24 px-6 section-veil section-contrast">
+        <div class="absolute inset-0 -z-10 bg-gradient-to-b from-midnight/20 via-[#0f1835]/60 to-midnight pointer-events-none" aria-hidden="true"></div>
+
+        <div class="max-w-2xl mx-auto">
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="heading-display text-white font-bold tracking-tight text-[clamp(1.75rem,3.2vw,2.35rem)] mb-4">
+                    Discutons de <span class="heading-accent text-goldLight font-normal">votre projet</span>
+                </h2>
+                <p class="text-muted text-sm md:text-base leading-relaxed">
+                    Remplissez ce formulaire ou écrivez-moi directement à
+                    <a href="mailto:midnightstudio162@gmail.com" class="text-gold hover:text-goldLight underline underline-offset-4 decoration-gold/40 hover:decoration-gold transition">
+                        midnightstudio162@gmail.com
+                    </a>.
+                </p>
+            </div>
+
+            <div
+                id="contact-success"
+                class="hidden mb-8 rounded-2xl border border-gold/35 bg-white/[0.06] backdrop-blur-xl px-8 py-10 text-center shadow-[0_0_0_1px_rgba(212,175,55,0.12)] opacity-0 translate-y-3 transition-all duration-500 ease-out"
+                role="status"
+                aria-live="polite"
+                aria-hidden="true"
+            >
+                <p class="text-gray-100 text-base md:text-lg font-light leading-relaxed">
+                    <span class="text-gold font-normal">✨</span>
+                    Merci ! Votre demande a bien été envoyée. Sakina vous répondra sous 24h.
+                </p>
+            </div>
+
+            <div
+                id="contact-form-shell"
+                class="rounded-2xl border border-white/22 bg-white/[0.07] backdrop-blur-xl p-8 md:p-10 shadow-xl transition-[border-color,box-shadow] duration-300 focus-within:border-gold/60 focus-within:shadow-[0_0_0_1px_rgba(212,175,55,0.35),0_12px_40px_rgba(0,0,0,0.4)] fade-in-up"
+            >
+                <form
+                    id="contact-form"
+                    action="https://formspree.io/f/xojpzqzn"
+                    method="POST"
+                    class="space-y-0"
+                >
+                    <div class="space-y-6">
+                        <div>
+                            <label for="contact-name" class="block text-xs font-semibold tracking-widest uppercase text-gold/90 mb-2">Nom &amp; Prénom</label>
+                            <input
+                                type="text"
+                                id="contact-name"
+                                name="name"
+                                required
+                                autocomplete="name"
+                                class="w-full rounded-lg bg-midnight/50 border border-white/15 px-4 py-3 text-sm text-gray-100 placeholder-gray-500 outline-none transition focus:border-gold focus:ring-1 focus:ring-gold/80"
+                                placeholder="Jean Dupont"
+                            />
+                        </div>
+
+                        <div>
+                            <label for="contact-email" class="block text-xs font-semibold tracking-widest uppercase text-gold/90 mb-2">Adresse email</label>
+                            <input
+                                type="email"
+                                id="contact-email"
+                                name="email"
+                                required
+                                autocomplete="email"
+                                class="w-full rounded-lg bg-midnight/50 border border-white/15 px-4 py-3 text-sm text-gray-100 placeholder-gray-500 outline-none transition focus:border-gold focus:ring-1 focus:ring-gold/80"
+                                placeholder="vous@exemple.com"
+                            />
+                        </div>
+
+                        <div>
+                            <label for="contact-type" class="block text-xs font-semibold tracking-widest uppercase text-gold/90 mb-2">Type de projet</label>
+                            <select
+                                id="contact-type"
+                                name="type_projet"
+                                class="w-full rounded-lg bg-midnight/50 border border-white/15 px-4 py-3 text-sm text-gray-100 outline-none transition focus:border-gold focus:ring-1 focus:ring-gold/80 cursor-pointer"
+                            >
+                                <option value="Identité Visuelle">Identité Visuelle</option>
+                                <option value="Site One-Page">Site One-Page</option>
+                                <option value="Site Corporate">Site Corporate</option>
+                                <option value="Site E-commerce">Site E-commerce</option>
+                                <option value="Autre">Autre</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="contact-details" class="block text-xs font-semibold tracking-widest uppercase text-gold/90 mb-2">Détails du projet</label>
+                            <textarea
+                                id="contact-details"
+                                name="message"
+                                required
+                                rows="5"
+                                class="w-full resize-y min-h-[140px] rounded-lg bg-midnight/50 border border-white/15 px-4 py-3 text-sm text-gray-100 placeholder-gray-500 outline-none transition focus:border-gold focus:ring-1 focus:ring-gold/80"
+                                placeholder="Décrivez votre besoin, vos délais, votre budget indicatif…"
+                            ></textarea>
+                        </div>
+                    </div>
+
+                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
+
+                    <button
+                        type="submit"
+                        id="contact-submit"
+                        class="mt-8 w-full magnetic interactive gold-glow rounded-lg btn-gold text-midnight font-semibold py-3.5 text-sm tracking-wide shadow-lg transition disabled:opacity-70 disabled:cursor-not-allowed"
+                    >
+                        Envoyer ma demande
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            (function () {
+                var form = document.getElementById("contact-form");
+                var shell = document.getElementById("contact-form-shell");
+                var success = document.getElementById("contact-success");
+                var btn = document.getElementById("contact-submit");
+                if (!form || !shell || !success || !btn) return;
+
+                var defaultLabel = btn.textContent.trim();
+
+                form.addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    var data = new FormData(form);
+                    btn.disabled = true;
+                    btn.textContent = "Envoi en cours...";
+
+                    fetch(form.action, {
+                        method: "POST",
+                        body: data,
+                        headers: { Accept: "application/json" },
+                    })
+                        .then(function (res) {
+                            if (!res.ok) throw new Error("Network response was not ok");
+                            return res.json().catch(function () {
+                                return {};
+                            });
+                        })
+                        .then(function () {
+                            form.reset();
+                            shell.classList.add("hidden");
+                            success.classList.remove("hidden");
+                            success.setAttribute("aria-hidden", "false");
+                            requestAnimationFrame(function () {
+                                requestAnimationFrame(function () {
+                                    success.classList.remove("opacity-0", "translate-y-3");
+                                    success.classList.add("opacity-100", "translate-y-0");
+                                });
+                            });
+                        })
+                        .catch(function () {
+                            alert("Une erreur est survenue. Réessayez ou écrivez à midnightstudio162@gmail.com.");
+                        })
+                        .finally(function () {
+                            btn.disabled = false;
+                            btn.textContent = defaultLabel;
+                        });
+                });
+            })();
+        </script>
+    </section>
+    </main>
+
+    <footer id="footer" class="py-12 bg-midnightLight/55 backdrop-blur border-t border-gold/15 text-center px-6 relative z-10">
+        <div class="max-w-4xl mx-auto flex flex-col items-center">
+            <div class="text-2xl text-white heading-display font-bold mb-6 fade-in-up">Midnight <span class="heading-accent text-gold font-normal">Studio</span></div>
+            <p class="text-muted text-sm mb-8 max-w-md fade-in-up">
+                Disponible pour échanger sur vos projets de création web, audits techniques et refontes d'identité visuelle.
+            </p>
+            
+            <p class="text-gray-500 text-xs tracking-widest uppercase fade-in-up">Midnight Studio &copy; 2026 — Conçu avec passion par Sakina</p>
+        </div>
+    </footer>
+
+    <script>
+        if (window.scrollX !== 0) {
+            window.scrollTo(0, window.scrollY);
+        }
+
+        const revealEls = document.querySelectorAll(".fade-in-up");
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("revealed");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        revealEls.forEach((el) => observer.observe(el));
+
+        const magneticEls = document.querySelectorAll(".magnetic");
+        if (window.matchMedia("(pointer: fine)").matches) {
+            magneticEls.forEach((el) => {
+                el.addEventListener("mousemove", (event) => {
+                    const rect = el.getBoundingClientRect();
+                    const x = event.clientX - rect.left - rect.width / 2;
+                    const y = event.clientY - rect.top - rect.height / 2;
+                    el.style.transform = `translate(${x * 0.12}px, ${y * 0.12}px)`;
+                });
+                el.addEventListener("mouseleave", () => {
+                    el.style.transform = "";
+                });
+            });
+        } else {
+            magneticEls.forEach((el) => {
+                el.style.transform = "";
+            });
+        }
+
+        const dot = document.getElementById("cursor-dot");
+        if (window.matchMedia("(pointer: fine)").matches) {
+            document.body.classList.add("custom-cursor");
+            window.addEventListener("mousemove", (event) => {
+                dot.style.opacity = "1";
+                dot.style.left = `${event.clientX}px`;
+                dot.style.top = `${event.clientY}px`;
+            });
+            const interactive = document.querySelectorAll(".interactive, a, button, img");
+            interactive.forEach((el) => {
+                el.addEventListener("mouseenter", () => dot.classList.add("active"));
+                el.addEventListener("mouseleave", () => dot.classList.remove("active"));
+            });
+        }
+
+        document.querySelectorAll("[data-carousel]").forEach((root) => {
+            const track = root.querySelector(".carousel-track");
+            const slides = Array.from(root.querySelectorAll(".carousel-slide"));
+            const dotsWrap = root.querySelector(".carousel-dots");
+            const thumbsWrap = root.querySelector(".carousel-thumbs");
+            const prevBtn = root.querySelector(".carousel-prev");
+            const nextBtn = root.querySelector(".carousel-next");
+            const panel = root.closest(".grid") || root.parentElement;
+            const titleEl = panel?.querySelector(".carousel-title");
+            const descEl = panel?.querySelector(".carousel-desc");
+            const tagsEl = panel?.querySelector(".carousel-tags");
+            const categoryEl = panel?.querySelector(".carousel-category");
+            const counterEl = root.querySelector(".carousel-counter");
+            if (!track || slides.length === 0 || !dotsWrap) return;
+
+            let index = 0;
+            let autoplayId = null;
+            const delay = 5200;
+            const thumbBtns = [];
+
+            function renderTags(tagString) {
+                if (!tagsEl || !tagString) return;
+                tagsEl.innerHTML = tagString.split(",").map((tag) =>
+                    `<span class="px-3 py-1 border rounded-full tag-pill">${tag.trim()}</span>`
+                ).join("");
+            }
+
+            slides.forEach((slide, i) => {
+                const dotBtn = document.createElement("button");
+                dotBtn.type = "button";
+                dotBtn.className = "carousel-dot interactive w-2 h-2 rounded-full bg-white/25 transition hover:bg-gold/70";
+                dotBtn.setAttribute("role", "tab");
+                dotBtn.setAttribute("aria-label", slide.dataset.label || `Slide ${i + 1}`);
+                dotBtn.addEventListener("click", () => goTo(i, true));
+                dotsWrap.appendChild(dotBtn);
+
+                if (thumbsWrap) {
+                    const img = slide.querySelector("img");
+                    const thumbBtn = document.createElement("button");
+                    thumbBtn.type = "button";
+                    thumbBtn.className = "carousel-thumb interactive";
+                    thumbBtn.setAttribute("role", "tab");
+                    thumbBtn.setAttribute("aria-label", slide.dataset.label || `Miniature ${i + 1}`);
+                    if (img) {
+                        const thumbImg = document.createElement("img");
+                        thumbImg.src = img.getAttribute("src") || "";
+                        thumbImg.alt = "";
+                        thumbBtn.appendChild(thumbImg);
+                    }
+                    thumbBtn.addEventListener("click", () => goTo(i, true));
+                    thumbsWrap.appendChild(thumbBtn);
+                    thumbBtns.push(thumbBtn);
+                }
+            });
+
+            const dotBtns = Array.from(dotsWrap.querySelectorAll(".carousel-dot"));
+
+            function goTo(next, userDriven) {
+                index = (next + slides.length) % slides.length;
+                const slide = slides[index];
+                root.style.setProperty("--slide-index", String(index));
+                slides.forEach((s, i) => s.classList.toggle("is-active", i === index));
+                dotBtns.forEach((btn, i) => {
+                    btn.classList.toggle("is-active", i === index);
+                    btn.setAttribute("aria-selected", i === index ? "true" : "false");
+                });
+                thumbBtns.forEach((btn, i) => {
+                    btn.classList.toggle("is-active", i === index);
+                    btn.setAttribute("aria-selected", i === index ? "true" : "false");
+                });
+                if (titleEl) titleEl.textContent = slide.dataset.label || "";
+                if (descEl) descEl.textContent = slide.dataset.desc || "";
+                if (categoryEl) categoryEl.textContent = slide.dataset.category || "";
+                renderTags(slide.dataset.tags || "");
+                if (counterEl) {
+                    counterEl.textContent = `${String(index + 1).padStart(2, "0")} / ${String(slides.length).padStart(2, "0")}`;
+                }
+                if (userDriven) restartAutoplay();
+            }
+
+            function restartAutoplay() {
+                if (autoplayId) clearInterval(autoplayId);
+                autoplayId = setInterval(() => goTo(index + 1, false), delay);
+            }
+
+            prevBtn?.addEventListener("click", () => goTo(index - 1, true));
+            nextBtn?.addEventListener("click", () => goTo(index + 1, true));
+            root.addEventListener("mouseenter", () => { if (autoplayId) clearInterval(autoplayId); });
+            root.addEventListener("mouseleave", restartAutoplay);
+
+            let touchStartX = 0;
+            root.addEventListener("touchstart", (e) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+            root.addEventListener("touchend", (e) => {
+                const delta = e.changedTouches[0].screenX - touchStartX;
+                if (Math.abs(delta) > 42) goTo(index + (delta < 0 ? 1 : -1), true);
+            }, { passive: true });
+
+            goTo(0, false);
+            restartAutoplay();
+        });
+
+        document.querySelectorAll(".business-card-scene").forEach((scene) => {
+            const coarsePointer = !window.matchMedia("(pointer: fine)").matches;
+            if (coarsePointer) {
+                scene.addEventListener("click", () => {
+                    scene.classList.toggle("is-flipped");
+                });
+            }
+            scene.addEventListener("keydown", (e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    scene.classList.toggle("is-flipped");
+                }
+            });
+        });
+
+        (function initMobileNav() {
+            const toggle = document.getElementById("nav-toggle");
+            const drawer = document.getElementById("nav-drawer");
+            if (!toggle || !drawer) return;
+
+            const drawerLinks = drawer.querySelectorAll('a[href^="#"]');
+
+            function setOpen(open) {
+                toggle.setAttribute("aria-expanded", open ? "true" : "false");
+                toggle.setAttribute("aria-label", open ? "Fermer le menu" : "Ouvrir le menu");
+                drawer.classList.toggle("is-open", open);
+                drawer.setAttribute("aria-hidden", open ? "false" : "true");
+                document.body.classList.toggle("nav-open", open);
+
+                if (open) {
+                    drawer.removeAttribute("inert");
+                    const firstLink = drawer.querySelector(".nav-drawer-link");
+                    if (firstLink) window.setTimeout(() => firstLink.focus(), 50);
+                } else {
+                    drawer.setAttribute("inert", "");
+                }
+            }
+
+            toggle.addEventListener("click", () => {
+                setOpen(toggle.getAttribute("aria-expanded") !== "true");
+            });
+
+            drawerLinks.forEach((link) => {
+                link.addEventListener("click", () => setOpen(false));
+            });
+
+            document.addEventListener("keydown", (event) => {
+                if (event.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") {
+                    setOpen(false);
+                    toggle.focus();
+                }
+            });
+
+            window.matchMedia("(min-width: 768px)").addEventListener("change", (event) => {
+                if (event.matches) setOpen(false);
+            });
+        })();
+
+        (function initHeroEffects() {
+            const hero = document.getElementById("hero");
+            const heroInner = document.getElementById("hero-inner");
+            const heroLine1 = document.getElementById("hero-line-1");
+            const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+            const finePointer = window.matchMedia("(pointer: fine)");
+
+            function decodeTitle(text) {
+                if (!heroLine1 || reducedMotion.matches || !text) {
+                    if (heroLine1 && text) heroLine1.textContent = text;
+                    return;
+                }
+
+                const glyphs = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz#%&*+=/";
+                const finalText = text;
+                const duration = 1100;
+                const start = performance.now();
+                heroLine1.classList.add("is-decoding");
+
+                function tick(now) {
+                    const progress = Math.min((now - start) / duration, 1);
+                    const revealCount = Math.floor(progress * finalText.length);
+                    let output = "";
+
+                    for (let i = 0; i < finalText.length; i += 1) {
+                        if (finalText[i] === " ") {
+                            output += " ";
+                        } else if (i < revealCount) {
+                            output += finalText[i];
+                        } else {
+                            output += glyphs[Math.floor(Math.random() * glyphs.length)];
+                        }
+                    }
+
+                    heroLine1.textContent = output;
+                    if (progress < 1) {
+                        requestAnimationFrame(tick);
+                    } else {
+                        heroLine1.textContent = finalText;
+                        heroLine1.classList.remove("is-decoding");
+                    }
+                }
+
+                requestAnimationFrame(tick);
+            }
+
+            window.__heroDecodeTitle = decodeTitle;
+
+            if (hero && finePointer.matches && !reducedMotion.matches) {
+                hero.addEventListener("mousemove", (event) => {
+                    const rect = hero.getBoundingClientRect();
+                    const x = ((event.clientX - rect.left) / rect.width) * 100;
+                    const y = ((event.clientY - rect.top) / rect.height) * 100;
+                    hero.style.setProperty("--hero-mx", `${x}%`);
+                    hero.style.setProperty("--hero-my", `${y}%`);
+
+                    if (heroInner) {
+                        const offsetX = (event.clientX - rect.left) / rect.width - 0.5;
+                        const offsetY = (event.clientY - rect.top) / rect.height - 0.5;
+                        heroInner.style.transform =
+                            `perspective(1100px) rotateX(${offsetY * -5}deg) rotateY(${offsetX * 6}deg)`;
+                    }
+                });
+
+                hero.addEventListener("mouseleave", () => {
+                    if (heroInner) heroInner.style.transform = "";
+                });
+            }
+        })();
+
+        (function initPerfExplorer() {
+            const root = document.getElementById("perf-explorer");
+            if (!root) return;
+
+            const tabs = Array.from(root.querySelectorAll("[data-perf-tab]"));
+            const panels = Array.from(root.querySelectorAll("[data-perf-panel]"));
+
+            function activateTab(tabId) {
+                tabs.forEach((tab) => {
+                    const active = tab.dataset.perfTab === tabId;
+                    tab.classList.toggle("is-active", active);
+                    tab.setAttribute("aria-selected", active ? "true" : "false");
+                });
+                panels.forEach((panel) => {
+                    panel.classList.toggle("is-active", panel.dataset.perfPanel === tabId);
+                });
+            }
+
+            tabs.forEach((tab) => {
+                tab.addEventListener("click", () => activateTab(tab.dataset.perfTab || "design"));
+            });
+        })();
+
+        (function initWebProjects() {
+            const filterRoot = document.getElementById("web-project-filters");
+            const projects = Array.from(document.querySelectorAll(".web-project[data-web-categories]"));
+            if (!filterRoot || projects.length === 0) return;
+
+            const filterBtns = Array.from(filterRoot.querySelectorAll("[data-web-filter]"));
+
+            function applyFilter(filter) {
+                filterBtns.forEach((btn) => {
+                    const active = btn.dataset.webFilter === filter;
+                    btn.classList.toggle("is-active", active);
+                    btn.setAttribute("aria-pressed", active ? "true" : "false");
+                });
+
+                projects.forEach((project) => {
+                    const categories = (project.dataset.webCategories || "").split(/\s+/);
+                    const visible = filter === "all" || categories.includes(filter);
+                    project.classList.toggle("is-hidden", !visible);
+                });
+
+                projects.forEach((project) => {
+                    project.classList.remove("web-project--reverse", "lg:flex-row-reverse");
+                });
+
+                const visibleProjects = projects.filter((project) => !project.classList.contains("is-hidden"));
+                visibleProjects.forEach((project, index) => {
+                    if (index % 2 === 1) {
+                        project.classList.add("web-project--reverse", "lg:flex-row-reverse");
+                    }
+                });
+            }
+
+            applyFilter("all");
+
+            filterBtns.forEach((btn) => {
+                btn.addEventListener("click", () => applyFilter(btn.dataset.webFilter || "all"));
+            });
+
+            const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            const finePointer = window.matchMedia("(pointer: fine)").matches;
+            const largeScreen = window.matchMedia("(min-width: 1024px)").matches;
+            const parallaxWraps = Array.from(document.querySelectorAll("[data-parallax-wrap]"));
+
+            function updateParallax() {
+                if (reducedMotion || !largeScreen || parallaxWraps.length === 0) return;
+                parallaxWraps.forEach((wrap) => {
+                    const media = wrap.closest(".web-project-media");
+                    if (!media) return;
+                    const rect = media.getBoundingClientRect();
+                    const centerOffset = rect.top + rect.height * 0.5 - window.innerHeight * 0.5;
+                    const shift = Math.max(-20, Math.min(20, centerOffset * 0.035));
+                    wrap.style.transform = `translate3d(0, ${shift}px, 0)`;
+                });
+            }
+
+            if (!reducedMotion && largeScreen) {
+                window.addEventListener("scroll", updateParallax, { passive: true });
+                window.addEventListener("resize", updateParallax, { passive: true });
+                updateParallax();
+            }
+
+            if (finePointer) {
+                projects.forEach((project) => {
+                    const mockup = project.querySelector(".browser-mockup");
+                    if (!mockup) return;
+                    project.addEventListener("mousemove", (event) => {
+                        const rect = mockup.getBoundingClientRect();
+                        const x = (event.clientX - rect.left) / rect.width - 0.5;
+                        const y = (event.clientY - rect.top) / rect.height - 0.5;
+                        mockup.style.transform = `perspective(900px) rotateY(${x * 4}deg) rotateX(${y * -3}deg)`;
+                    });
+                    project.addEventListener("mouseleave", () => {
+                        mockup.style.transform = "";
+                    });
+                });
+            }
+        })();
+    </script>
+
+    <script>
+        (function () {
+            var translations = {
+                fr: {
+                    hero_title_1: "Design qui séduit.",
+                    hero_title_2: "Technique qui performe.",
+                    hero_lead: "UX, développement et SEO pour des marques qui visent l'excellence.",
+                },
+                en: {
+                    hero_title_1: "Design that captivates.",
+                    hero_title_2: "Engineering that delivers.",
+                    hero_lead: "UX, development and SEO for brands that demand excellence.",
+                },
+                de: {
+                    hero_title_1: "Design, das überzeugt.",
+                    hero_title_2: "Technik, die performt.",
+                    hero_lead: "UX, Entwicklung und SEO für Marken mit hohen Ansprüchen.",
+                },
+            };
+
+            var STORAGE_KEY = "midnight-studio-lang";
+
+            function normalizeLang(code) {
+                if (code === "en" || code === "de" || code === "fr") return code;
+                return "fr";
+            }
+
+            function applyLang(lang) {
+                lang = normalizeLang(lang);
+                var dict = translations[lang];
+                if (!dict) return;
+
+                document.querySelectorAll("[data-i18n]").forEach(function (el) {
+                    var key = el.getAttribute("data-i18n");
+                    if (key && dict[key] !== undefined) {
+                        if (key === "hero_title_1" && typeof window.__heroDecodeTitle === "function") {
+                            window.__heroDecodeTitle(dict[key]);
+                        } else {
+                            el.textContent = dict[key];
+                        }
+                    }
+                });
+
+                try {
+                    localStorage.setItem(STORAGE_KEY, lang);
+                } catch (e) {}
+
+                document.documentElement.lang =
+                    lang === "en" ? "en" : lang === "de" ? "de" : "fr";
+
+                document.querySelectorAll(".lang-switch-btn").forEach(function (btn) {
+                    var active = btn.getAttribute("data-lang") === lang;
+                    btn.setAttribute("aria-pressed", active ? "true" : "false");
+                    btn.classList.toggle("text-gold", active);
+                    btn.classList.toggle("text-gray-400", !active);
+                });
+            }
+
+            document.getElementById("site-nav")?.addEventListener("click", function (e) {
+                var btn = e.target.closest(".lang-switch-btn[data-lang]");
+                if (!btn) return;
+                var code = btn.getAttribute("data-lang");
+                if (code) applyLang(code);
+            });
+
+            /* Langue par défaut au chargement : français (fr) */
+            var saved = null;
+            try {
+                saved = localStorage.getItem(STORAGE_KEY);
+            } catch (e) {}
+            applyLang(saved || "fr");
+        })();
+    </script>
+</body>
+</html>
